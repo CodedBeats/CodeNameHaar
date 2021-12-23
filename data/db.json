@@ -1,0 +1,22 @@
+{
+  "blogs": [
+    {
+      "title": "Problem Solving Volume 1",
+      "body": "Don't Think Too Hard",
+      "author": "Luca",
+      "id": 1
+    },
+    {
+      "title": "Problem Solving Volume 2",
+      "body": "Google Shit",
+      "author": "Luca",
+      "id": 2
+    },
+    {
+      "title": "Problem Solving Volume 3",
+      "body": "Ask For Help",
+      "author": "0 Ego Man",
+      "id": 3
+    }
+  ]
+}

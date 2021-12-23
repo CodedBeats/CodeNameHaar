@@ -1,0 +1,13 @@
+.blog-preview {
+    padding: 10px 16px;
+    margin: 20px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+.blog-preview:hover {
+    box-shadow: 4px 12px 20px rgba(34, 34, 34, 0.1);
+}
+.blog-preview h4 {
+    font-size: 20px;
+    color: #f1356d;
+    margin-bottom: 8px;
+}
