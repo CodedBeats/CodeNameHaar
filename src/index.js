@@ -1,9 +1,11 @@
-import { initializeApp } from "firebase/app"
-import { getFirestore, collection, getDocs } from "firebase/firestore"
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+
+
+import { initializeApp } from "firebase/app"
+import { getFirestore, collection, getDocs } from "firebase/firestore"
 
 const firebaseConfig = {
   apiKey: "AIzaSyAdbkOeREKjkTZwnZXQNoKPn9wtAUEGTMI",
