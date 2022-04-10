@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app"
-import { getFirestore, collection, getDocs } from "@firebase/firestore"
+import { getFirestore } from "@firebase/firestore"
 import "dotenv/config"
 
 const firebaseConfig = {

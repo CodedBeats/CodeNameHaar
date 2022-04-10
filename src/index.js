@@ -3,24 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
+// Firebase
+import { db } from "./firebaseConfig"
+import { collection, getDocs } from "firebase/firestore"
 
-import { initializeApp } from "firebase/app"
-import { getFirestore, collection, getDocs } from "firebase/firestore"
-
-const firebaseConfig = {
-  apiKey: "AIzaSyAdbkOeREKjkTZwnZXQNoKPn9wtAUEGTMI",
-  authDomain: "codedbeats-47589.firebaseapp.com",
-  projectId: "codedbeats-47589",
-  storageBucket: "codedbeats-47589.appspot.com",
-  messagingSenderId: "927207907473",
-  appId: "1:927207907473:web:9997198672de5f2efc9f30"
-};
-
-// init firebase app
-initializeApp(firebaseConfig)
-// init services
-const db = getFirestore()
-// collection ref
+// collection reference
 const colRef = collection(db, "woods")
 // get collection data
 getDocs(colRef)
