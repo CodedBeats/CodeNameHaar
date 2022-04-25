@@ -4,11 +4,10 @@ import './index.css';
 import App from './App';
 
 // Firebase
-import { db } from "./firebaseConfig"
-import { collection, getDocs } from "firebase/firestore"
+import { colRef } from "./firebase/firebaseConfig"
+import { getDocs } from "firebase/firestore"
 
-// collection reference
-const colRef = collection(db, "woods")
+
 // get collection data
 getDocs(colRef)
   .then((snapshot) => {

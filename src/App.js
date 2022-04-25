@@ -1,4 +1,4 @@
-
+import "./firebase/firebase-crud"
 
 const App = () => {
     
@@ -6,17 +6,17 @@ const App = () => {
         <div>
             <h2>Firebase Firestore</h2>
 
-            <form class="add">
-                <label for="title">Title:</label>
+            <form className="add">
+                <label htmlFor="title">Title:</label>
                 <input type="text" name="title" required></input>
-                <label for="density">Density:</label>
+                <label htmlFor="density">Density:</label>
                 <input type="text" name="density" required></input>
 
                 <button>Add a new wood</button>
             </form>
 
-            <form class="delete">
-                <label for="id">Document id:</label>
+            <form className="delete">
+                <label htmlFor="id">Document id:</label>
                 <input type="text" name="id"></input>
 
                 <button>Delete a wood</button>

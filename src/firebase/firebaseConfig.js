@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app"
-import { getFirestore } from "@firebase/firestore"
+import { getFirestore, collection } from "@firebase/firestore"
 import "dotenv/config"
 
 const firebaseConfig = {
@@ -16,6 +16,9 @@ const app = initializeApp(firebaseConfig)
 
 // init services by connecting to database
 export const db = getFirestore(app)
+
+// collection reference
+export const colRef = collection(db, "woods")
 
 
     
