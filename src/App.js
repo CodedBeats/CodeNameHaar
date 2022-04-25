@@ -1,4 +1,3 @@
-import Elevate from './components/elevator'
 
 
 const App = () => {
@@ -22,8 +21,6 @@ const App = () => {
 
                 <button>Delete a wood</button>
             </form>
-
-            <Elevate />
 
         </div>
     );
