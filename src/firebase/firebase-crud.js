@@ -1,4 +1,4 @@
-import { addDoc, deleteDoc, doc, serverTimestamp } from "firebase/firestore"
+import { addDoc, deleteDoc, doc, serverTimestamp, getDoc, onSnapshot } from "firebase/firestore"
 import { db, colRef } from "./firebaseConfig"
 // import "../App"
 
@@ -33,4 +33,16 @@ window.onload = function() {
             deletePostForm.reset()
         })
     })
+
+    // getting a single document
+    const docRef = doc(db, "posts", "RCb2ID34vTDq6exYkHP2")
+
+    onSnapshot(docRef, (doc) => {
+        console.log(doc.data(), doc.id)
+    })
+    
+    // getDoc(docRef)
+    //     .then((doc) => {
+    //         console.log(doc.data(), doc.id)
+    //     })
 }
