@@ -5,22 +5,17 @@ import App from './App';
 
 // Firebase
 import { colRef } from "./firebase/firebaseConfig"
-import { getDocs } from "firebase/firestore"
+import { onSnapshot } from "firebase/firestore"
 
 
-// get collection data
-getDocs(colRef)
-  .then((snapshot) => {
-  // console.log(snapshot.docs)
-  let woods = []
+// real time collection data
+onSnapshot(colRef, (snapshot) => {
+  let posts = []
   snapshot.docs.forEach((doc) => {
-    woods.push({ ...doc.data(), id: doc.id })
+    posts.push({ ...doc.data(), id: doc.id })
   })
-  console.log(woods)
-  })
-  .catch((err) => {
-    console.error(err.message)
-  })
+  console.log(posts)
+})
 
 
 ReactDOM.render(

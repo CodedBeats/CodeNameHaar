@@ -18,7 +18,7 @@ const app = initializeApp(firebaseConfig)
 export const db = getFirestore(app)
 
 // collection reference
-export const colRef = collection(db, "woods")
+export const colRef = collection(db, "posts")
 
 
     

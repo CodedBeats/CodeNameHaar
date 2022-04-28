@@ -5,31 +5,32 @@ import { db, colRef } from "./firebaseConfig"
 window.onload = function() {
 
     // adding post
-    const addWoodForm = document.querySelector(".add")
-    addWoodForm.addEventListener("submit", (e) => {
+    const addPostForm = document.querySelector(".add")
+    addPostForm.addEventListener("submit", (e) => {
         e.preventDefault()
 
         addDoc(colRef, {
-            title: addWoodForm.title.value,
-            density: addWoodForm.density.value,
+            title: addPostForm.title.value,
+            content: addPostForm.content.value,
         })
         .then(() => {
-            addWoodForm.reset()
+            addPostForm.reset()
         })
     })
 
 
 
     // deleting post
-    const deleteWoodForm = document.querySelector(".delete")
-    deleteWoodForm.addEventListener("submit", (e) => {
+    const deletePostForm = document.querySelector(".delete")
+    deletePostForm.addEventListener("submit", (e) => {
         e.preventDefault()
 
-        const docRef = doc(db, "woods", deleteWoodForm.id.value)
+        const docRef = doc(db, "posts", deletePostForm.id.value)
 
         deleteDoc(docRef)
         .then(() => {
-            deleteWoodForm.reset()
+            console.log("done")
+            deletePostForm.reset()
         })
     })
 }

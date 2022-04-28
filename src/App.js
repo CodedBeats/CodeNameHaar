@@ -9,17 +9,17 @@ const App = () => {
             <form className="add">
                 <label htmlFor="title">Title:</label>
                 <input type="text" name="title" required></input>
-                <label htmlFor="density">Density:</label>
-                <input type="text" name="density" required></input>
+                <label htmlFor="density">Content:</label>
+                <input type="text" name="content" required></input>
 
-                <button>Add a new wood</button>
+                <button>Add A New Post</button>
             </form>
 
             <form className="delete">
-                <label htmlFor="id">Document id:</label>
+                <label htmlFor="id">Post id:</label>
                 <input type="text" name="id"></input>
 
-                <button>Delete a wood</button>
+                <button>Delete A Post</button>
             </form>
 
         </div>
