@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app"
-import { getFirestore, collection } from "@firebase/firestore"
+import { getFirestore, collection, query, where, orderBy } from "@firebase/firestore"
 import "dotenv/config"
 
 const firebaseConfig = {
@@ -19,6 +19,9 @@ export const db = getFirestore(app)
 
 // collection reference
 export const colRef = collection(db, "posts")
+
+// queries
+export const q = query(colRef, orderBy("createdAt"))
 
 
     

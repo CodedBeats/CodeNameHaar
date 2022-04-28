@@ -4,12 +4,12 @@ import './index.css';
 import App from './App';
 
 // Firebase
-import { colRef } from "./firebase/firebaseConfig"
+import { q } from "./firebase/firebaseConfig"
 import { onSnapshot } from "firebase/firestore"
 
 
 // real time collection data
-onSnapshot(colRef, (snapshot) => {
+onSnapshot(q, (snapshot) => {
   let posts = []
   snapshot.docs.forEach((doc) => {
     posts.push({ ...doc.data(), id: doc.id })

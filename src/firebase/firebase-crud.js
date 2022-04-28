@@ -1,4 +1,4 @@
-import { addDoc, deleteDoc, doc } from "firebase/firestore"
+import { addDoc, deleteDoc, doc, serverTimestamp } from "firebase/firestore"
 import { db, colRef } from "./firebaseConfig"
 // import "../App"
 
@@ -12,6 +12,7 @@ window.onload = function() {
         addDoc(colRef, {
             title: addPostForm.title.value,
             content: addPostForm.content.value,
+            createdAt: serverTimestamp()
         })
         .then(() => {
             addPostForm.reset()
@@ -29,7 +30,6 @@ window.onload = function() {
 
         deleteDoc(docRef)
         .then(() => {
-            console.log("done")
             deletePostForm.reset()
         })
     })
