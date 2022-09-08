@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 
 // Firebase import
-import { q } from "./firebase/firebase-config"
+import { q } from "./components/firebase/firebase-config"
 import { onSnapshot } from 'firebase/firestore';
 
 
