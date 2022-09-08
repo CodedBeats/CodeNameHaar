@@ -28,5 +28,3 @@ const AddPost = () => {
  
 export default AddPost;
 
-// Add post form
-// https://formik.org/docs/overview
