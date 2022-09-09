@@ -1,9 +1,13 @@
+// components
+import Navbar from "../nav/Navbar"
 import "../firebase/firebase-CRUD"
 
 const AddPost = () => {
     
     return (
         <div>
+            <Navbar />
+
             <h2>Firebase Firestore</h2>
 
             <form className="add">

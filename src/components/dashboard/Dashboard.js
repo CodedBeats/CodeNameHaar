@@ -1,3 +1,6 @@
+// components
+import Navbar from "../nav/Navbar"
+
 // dependencies
 import { Link } from "react-router-dom"
 
@@ -5,9 +8,7 @@ const Dashboard = () => {
     
     return ( 
         <div>
-            <button>
-                <Link to="../posts/add">x</Link>
-            </button>
+            <Navbar />
 
 
             <h1>Title</h1>
