@@ -1,17 +1,16 @@
-// components
+// style
 import Navbar from "../nav/Navbar"
 
-// dependencies
-import { Link } from "react-router-dom"
+// components
+import Hexagons from "../misc/Hexagons"
+
 
 const Dashboard = () => {
     
     return ( 
         <div>
             <Navbar />
-
-
-            <h1>Title</h1>
+            <Hexagons />
         </div>
     );
 }

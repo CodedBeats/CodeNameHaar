@@ -1,5 +1,6 @@
 // style
 import "./css/navbar.css"
+import ".././misc/css/page-container.css"
 
 // dependencies
 import { Link } from "react-router-dom"
@@ -9,19 +10,38 @@ const Navbar = () => {
     
     return ( 
         <div className="navbar">
-            <ul className="nav-link-container">
-                <Link className="nav-link" to="/">
-                    <li>Home</li>
-                </Link>
+            <div className="container">
+                <div className="nav-logo-container">
+                    <Link className="nav-logo" to="/">
+                        CodedBeats
+                    </Link>
+                </div>
 
-                <Link className="nav-link" to="../posts/add">
-                    <li className="nav-link">Add Post</li>
-                </Link>
+                <div className="nav-link-container">
+                    <ul>
+                        <li>
+                            <Link className="nav-link" to="/">
+                                Home
+                            </Link>
+                        </li>
 
-                <Link className="nav-link" to="../posts/add">
-                    <li className="nav-link">Add Post</li>
-                </Link>
-            </ul>
+                        <li>
+                            <Link className="nav-link" to="../posts/add">
+                                Add Post
+                            </Link>
+                        </li>
+                    </ul>
+                    
+                    <ul>
+                        <li>
+                            <Link className="nav-link" to="#">
+                                Login
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
         </div>
     );
 }
