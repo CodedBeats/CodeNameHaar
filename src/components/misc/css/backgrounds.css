@@ -1,12 +1,9 @@
 body {
-    /* min-height: 100vh; */
-    background: rgb(119, 119, 119);
     overflow: hidden;
 }
 
 .hex-container {
     position: relative;
-    /* height: 100vh; */
     overflow: hidden;
     animation: animate 4s linear infinite;
 }
@@ -14,8 +11,6 @@ body {
 /* Hexagon using clip-path */
 .hexagon {
     position: relative;
-    /* width: 100px;
-    height: 110px; */
     width: 100px;
     height: 110px;
     background: black;
@@ -37,7 +32,7 @@ body {
     width: 50%;
     height: 100%;
     pointer-events: none;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(202, 202, 202, 0.2);
 }
 
 .row {

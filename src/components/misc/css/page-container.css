@@ -1,3 +1,7 @@
+body {
+    background: rgb(201, 201, 201);
+}
+
 .container {
     width: 80%;
     margin: 0 auto;
