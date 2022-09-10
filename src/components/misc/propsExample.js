@@ -1,19 +1,15 @@
 const ChangeStyle = (props) => {
 
+    // potential example values to pass for props
     let elementClass = props.className
     let setStyleProperty = props.property
     let setStyleValue1 = props.value1
     let setStyleValue2 = props.value2
 
-    let selectedElement = document.querySelector(elementClass)
-
-    if (props.style) {
-        selectedElement.style.setProperty(setStyleProperty, setStyleValue1)
-    } else {
-        selectedElement.style.setProperty(setStyleProperty, setStyleValue2)
-    }
+    // some code here?
 
 
+    // good to put something simple here
     return ( 
         <div>
             <button className="" onClick={props.handleClick} type="button">
