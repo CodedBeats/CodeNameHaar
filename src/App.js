@@ -8,8 +8,11 @@ import Dashboard from "./components/dashboard/Dashboard"
 import NotFound from "./components/misc/NotFound"
 
 // posts
-import Posts from "./components/posts/Posts"
-import AppPost from "./components/posts/AddPost"
+import Posts from "./components/projects/Projects"
+
+// records
+import Records from "./components/records/Records"
+import AddRecord from "./components/records/AddRecord"
 
 
 
@@ -19,8 +22,9 @@ const App = () => {
         <Router>
             <Routes>
                 <Route path="/" element={<Dashboard />} />
-                <Route path="/posts" element={<Posts />} />
-                <Route path="/posts/add" element={<AppPost />} />
+                <Route path="/projects" element={<Posts />} />
+                <Route path="/records" element={<Records />} />
+                <Route path="/records/add-record" element={<AddRecord />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </Router>

@@ -5,4 +5,5 @@
 5. incorporate formik
 6. investigate firebase security rules
 7. research search function to add to nav
-8. add scroll to top person
+8. add scroll to top component
+9. move the add page link for projects and records to their individual pages and remove from navbar

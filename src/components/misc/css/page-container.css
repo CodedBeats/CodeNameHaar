@@ -1,9 +1,26 @@
-body {
+.page-container {
     background: rgb(201, 201, 201);
+    min-height: 100vh;
+    
+    /* hide scroll bar */
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
-.container {
+/* hide scroll bar */
+::-webkit-scrollbar {
+    width: 0;  /* Remove space for scrollbar */
+}
+
+.body-container {
     width: 80%;
     margin: 0 auto;
     flex: 1 0 auto;
+}
+
+
+
+
+h1 {
+    margin: 0;
 }

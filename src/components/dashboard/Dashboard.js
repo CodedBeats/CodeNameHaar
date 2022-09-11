@@ -15,23 +15,31 @@ const Dashboard = () => {
     const [style, setStyle] = useState(false)
 
     const handleClick = () => {
-        // toggle
+        // toggle (current => !current = !current /|\ !current => !current = current)
         setStyle(current => !current)
-        // or
-        // setStyle(true)
     }
     
     return ( 
         <div className="dashboard">
             <Navbar />
-            <Hexagons />
-            <div
-                style={{
-                    backgroundColor: style ? "red" : "green",
-                    color: style ? "green" : "yellow",
-                }}
-                onClick={handleClick}
-            >Toggle Me</div>
+            
+            <div className="page-container">
+
+                <Hexagons />
+
+                <div className="body-container"
+                    style={{
+                        backgroundColor: style ? "yellow" : "green",
+                        // color: style ? "green" : "yellow",
+                    }}
+                    onClick={handleClick}
+                >
+                    
+                    Toggle Me
+                    <h1>HAHAHAHAHA</h1>
+
+                </div>
+            </div>
         </div>
     );
 }

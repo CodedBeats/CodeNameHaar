@@ -2,7 +2,7 @@
 import Navbar from "../nav/Navbar"
 import "../firebase/firebase-CRUD"
 
-const AddPost = () => {
+const AddRecord = () => {
     
     return (
         <div>
@@ -30,5 +30,4 @@ const AddPost = () => {
     );
 }
  
-export default AddPost;
-
+export default AddRecord;

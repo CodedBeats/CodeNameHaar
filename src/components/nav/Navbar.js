@@ -3,40 +3,56 @@ import "./css/navbar.css"
 import ".././misc/css/page-container.css"
 
 // dependencies
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 
 const Navbar = () => {
     
     return ( 
         <div className="navbar">
-            <div className="container">
+            <div className="body-container">
                 <div className="nav-logo-container">
-                    <Link className="nav-logo" to="/">
+                    <NavLink className="nav-logo" to="/">
                         CodedBeats
-                    </Link>
+                    </NavLink>
                 </div>
 
                 <div className="nav-link-container">
                     <ul>
                         <li>
-                            <Link className="nav-link" to="/">
-                                Home
-                            </Link>
-                        </li>
+                            <NavLink to="/"
+                                // className={isActive => 
+                                //     `nav-link ${!isActive ? "active-link" : ""}`
+                                // }
 
+                                className="nav-link"
+                                activeClassName="active-link"
+                            >
+                                Home
+                            </NavLink>
+                        </li>
                         <li>
-                            <Link className="nav-link" to="../posts/add">
-                                Add Post
-                            </Link>
+                            <NavLink className="nav-link" to="../projects">
+                                Projects
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink className="nav-link" to="../records">
+                                Records
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink className="nav-link" to="../records/add-record">
+                                Add Record
+                            </NavLink>
                         </li>
                     </ul>
                     
                     <ul>
                         <li>
-                            <Link className="nav-link" to="#">
+                            <NavLink className="nav-link" to="#">
                                 Login
-                            </Link>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
