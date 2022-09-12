@@ -20,7 +20,7 @@ const Dashboard = () => {
     }
     
     return ( 
-        <div className="dashboard">
+        <div className="dashboard container">
             <Navbar />
             
             <div className="page-container">

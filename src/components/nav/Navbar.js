@@ -10,7 +10,7 @@ import ".././misc/css/page-container.css"
 const Navbar = () => {
     
     return ( 
-        <div className="navbar">
+        <div className="navbar container">
             <Link className="nav-logo" to="/">
                 CodedBeats
             </Link>

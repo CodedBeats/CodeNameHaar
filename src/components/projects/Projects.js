@@ -8,7 +8,7 @@ import "../firebase/firebase-CRUD"
 const Projects = () => {
     
     return (
-        <div className="dashboard">
+        <div className="container">
             <Navbar />
             
             <div className="page-container">

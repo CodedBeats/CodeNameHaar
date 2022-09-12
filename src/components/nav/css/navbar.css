@@ -94,12 +94,16 @@
 .nav-logo {
     font-size: 2rem;
 }
+.nav-logo:hover {
+    animation: colorAnimation 8s linear infinite;
+}
 
 .navbar ul {
     padding: 0;
     margin: 0;
     list-style: none;
     display: flex;
+    align-items: stretch;
     gap: 1rem;
 }
 
@@ -109,7 +113,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    padding: .5rem;
+    padding: 0 .5rem 0;
 }
 
 .navbar li.active {
