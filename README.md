@@ -81,4 +81,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - [ ] research search function to add to nav
 - [ ] add scroll to top component
 
-- [ X ] move the add page link for projects and records to their individual pages and remove from navbar
+- [X] move the add page link for projects and records to their individual pages and remove from navbar
