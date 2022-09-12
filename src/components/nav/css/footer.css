@@ -1,0 +1,22 @@
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(31, 31, 31);
+    color: white;
+    text-align: center;
+}
+
+.footer-icon-link {
+    font-size: 5em;
+    color: white;
+    padding: 0 0.5rem 0;
+    margin: 0 4rem 0;
+}
+
+.footer-icon-link i {
+    transition: .25s;
+}
+.footer-icon-link i:hover {
+    transform: scale(1.1);
+}

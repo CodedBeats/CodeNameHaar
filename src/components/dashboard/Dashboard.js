@@ -7,6 +7,7 @@ import "./css/dashboard.css"
 
 // components
 import Navbar from "../nav/Navbar"
+import Footer from "../nav/Footer"
 import Hexagons from "../misc/Hexagons"
 
 
@@ -40,6 +41,8 @@ const Dashboard = () => {
 
                 </div>
             </div>
+
+            <Footer />
         </div>
     );
 }
