@@ -1,3 +1,4 @@
+<!-- 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -67,4 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
+
+### Todo
+
+- [ ] split firebase-CRUD into individual components
+- [ ] create not found page
+- [ ] create footer
+- [ ] Add login auth
+- [ ] incorporate formik
+- [ ] investigate firebase security rules
+- [ ] research search function to add to nav
+- [ ] add scroll to top component
+
+- [ ] move the add page link for projects and records to their individual pages and remove from navbar

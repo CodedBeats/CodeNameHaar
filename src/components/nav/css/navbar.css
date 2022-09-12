@@ -92,7 +92,7 @@
 }
 
 .nav-logo {
-    font-size: 2rem;
+    font-size: 2rem !important;
 }
 .nav-logo:hover {
     animation: colorAnimation 8s linear infinite;
@@ -114,13 +114,15 @@
     display: flex;
     align-items: center;
     padding: 0 .5rem 0;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 .navbar li.active {
-    background-color: rgb(172, 172, 172);
-    color: rgb(255, 153, 0);
+    background-color: rgb(100, 0, 0);
+    color: rgb(0, 161, 94);
 }
 .navbar li:hover {
     background-color: rgb(219, 219, 219);
-    color: black;
+    color: rgb(0, 161, 94);
 }
