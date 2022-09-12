@@ -8,13 +8,13 @@ import "../firebase/firebase-CRUD"
 const AddRecord = () => {
     
     return (
-        <div>
+        <div className="container">
             <Navbar />
 
             <div className="page-container">
                 <div className="body-container">
 
-                    <h2>Add Record</h2>
+                    <h2>Add A Record</h2>
 
                     <form className="add">
                         <label htmlFor="title">Title:</label>

@@ -1,9 +1,11 @@
+// dependencies
+import { Link } from "react-router-dom"
+
 // style
 import "../misc/css/page-container.css"
 
 // components
 import Navbar from "../nav/Navbar"
-import "../firebase/firebase-CRUD"
 
 const Projects = () => {
     
@@ -14,6 +16,10 @@ const Projects = () => {
             <div className="page-container">
                 <div className="body-container">
                     <h2>Projects</h2>
+
+                    <Link className="" to="/projects/add">
+                        Add Project
+                    </Link>
                     
                 </div>  
             </div>

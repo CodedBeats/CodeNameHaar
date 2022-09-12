@@ -18,7 +18,6 @@ const Navbar = () => {
             <ul>
                 <CustomLink to="/projects">Projects</CustomLink>
                 <CustomLink to="/records">Records</CustomLink>
-                <CustomLink to="/records/add">Add Record</CustomLink>
                 {/* <CustomLink to="/">Login</CustomLink> */}
             </ul>
         </div>
@@ -39,5 +38,5 @@ let CustomLink = ({to, children, ...props}) => {
         </li>
     )
 }
- 
+
 export default Navbar;

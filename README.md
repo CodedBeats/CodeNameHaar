@@ -70,7 +70,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
 
-### Todo
+## Todo
 
 - [ ] split firebase-CRUD into individual components
 - [ ] create not found page
@@ -81,4 +81,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - [ ] research search function to add to nav
 - [ ] add scroll to top component
 
-- [ ] move the add page link for projects and records to their individual pages and remove from navbar
+- [ X ] move the add page link for projects and records to their individual pages and remove from navbar
