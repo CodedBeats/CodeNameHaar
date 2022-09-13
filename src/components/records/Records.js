@@ -6,6 +6,7 @@ import "../misc/css/page-container.css"
 
 // components
 import Navbar from "../nav/Navbar"
+import Footer from "../nav/Footer"
 
 const Records = () => {
     
@@ -15,14 +16,16 @@ const Records = () => {
             
             <div className="page-container">
                 <div className="body-container">
+
                     <h2>Records</h2>
 
                     <Link className="" to="/records/add">
                         Add Record
                     </Link>
-                    
+
                 </div>  
             </div>
+            <Footer />
         </div>
     );
 }

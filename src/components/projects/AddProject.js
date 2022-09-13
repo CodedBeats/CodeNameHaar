@@ -4,6 +4,7 @@ import "../misc/css/page-container.css"
 // components
 import Navbar from "../nav/Navbar"
 import "../firebase/firebase-CRUD"
+import Footer from "../nav/Footer"
 
 const AddProject = () => {
     
@@ -17,6 +18,7 @@ const AddProject = () => {
                     
                 </div>  
             </div>
+            <Footer />
         </div>
     );
 }

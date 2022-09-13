@@ -6,6 +6,7 @@ import "../misc/css/page-container.css"
 
 // components
 import Navbar from "../nav/Navbar"
+import Footer from "../nav/Footer"
 
 const Projects = () => {
     
@@ -23,6 +24,7 @@ const Projects = () => {
                     
                 </div>  
             </div>
+            <Footer />
         </div>
     );
 }
