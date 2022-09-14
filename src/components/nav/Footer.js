@@ -15,28 +15,30 @@ const Footer = () => {
     
     const [titleText, setTitleText] = useState("")
     const [bodyText, setBodyText] = useState("")
-    
-    const openModal = (title, body) => {
-        
-        setTitleText(title)
-        setBodyText(body)
-        
-        let modal = document.getElementById("modal-box")
-        modal.style.display = "block"
-    }
+    const [showingModal, setShowingModal] = useState(false)
     
     return ( 
         <div className="footer container">
-            <div id="modal-component-container">
-                <Modal id="modal-box" title={titleText} body={bodyText} />
-            </div>
             
-            <Link className="footer-icon-link" to="#" onClick={() => { openModal("Github", "https://github.com/CodedBeats") }}>
+            <Link className="footer-icon-link" to="#" onClick={() => { 
+                setTitleText("Github")
+                setBodyText("https://github.com/CodedBeats")
+                setShowingModal(true)
+                console.log(titleText, bodyText, showingModal)
+            }}>
                 <i className="fa fa-brands fa-github" />
             </Link>
-            <Link className="footer-icon-link" to="#" onClick={() => { openModal("Email", "luca.haar@icloud.com") }}>
+
+            <Link className="footer-icon-link" to="#" onClick={() => { 
+                setTitleText("Email")
+                setBodyText("luca.haar@icloud.com")
+                setShowingModal(true)
+                console.log(titleText, bodyText, showingModal)
+            }}>
                 <i className="fa fa-solid fa-envelope" />
             </Link>
+
+            {showingModal && <Modal title={titleText} body={bodyText} onClose={() => setShowingModal(false)} />}
 
         </div>
     );

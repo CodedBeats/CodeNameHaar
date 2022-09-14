@@ -75,7 +75,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - [ ] split firebase-CRUD into individual components
 - [ ] create not found page
 - [ ] Add login auth
-- [ ] incorporate formik
+- [ ] react form
 - [ ] investigate firebase security rules
 - [ ] research search function to add to nav
 - [ ] add scroll to top component
