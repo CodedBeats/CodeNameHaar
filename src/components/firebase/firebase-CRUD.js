@@ -1,7 +1,8 @@
-import { addDoc, deleteDoc, doc, serverTimestamp, /*getDoc,*/ onSnapshot } from "firebase/firestore"
-import { db, colRef } from "./firebase-config"
+// import { addDoc, deleteDoc, doc, serverTimestamp, /*getDoc,*/ onSnapshot } from "firebase/firestore"
+// import { db, colRef } from "./firebaseConfig"
 // import "../App"
 
+/*
 window.onload = function() {
 
     // adding post
@@ -46,3 +47,4 @@ window.onload = function() {
     //         console.log(doc.data(), doc.id)
     //     })
 }
+*/

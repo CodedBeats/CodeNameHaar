@@ -72,7 +72,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Todo
 
-- [ ] split firebase-CRUD into individual components
+- [ ] turn react form into re-usable component for projects (maybe with lots of props, figgure out the {...props} thing)
 - [ ] create not found page
 - [ ] Add login auth
 - [ ] react form

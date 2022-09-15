@@ -24,7 +24,7 @@ const Footer = () => {
                 setTitleText("Github")
                 setBodyText("https://github.com/CodedBeats")
                 setShowingModal(true)
-                console.log(titleText, bodyText, showingModal)
+                // console.log(titleText, bodyText, showingModal)
             }}>
                 <i className="fa fa-brands fa-github" />
             </Link>
@@ -33,7 +33,7 @@ const Footer = () => {
                 setTitleText("Email")
                 setBodyText("luca.haar@icloud.com")
                 setShowingModal(true)
-                console.log(titleText, bodyText, showingModal)
+                // console.log(titleText, bodyText, showingModal)
             }}>
                 <i className="fa fa-solid fa-envelope" />
             </Link>

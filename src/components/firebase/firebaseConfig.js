@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getFirestore, collection, getDocs, query, orderBy, } from 'firebase/firestore'
+import { getStorage } from 'firebase/storage'
 // import "dotenv/config"
 
 const firebaseConfig = {
@@ -14,17 +15,20 @@ const firebaseConfig = {
 // init firebase app
 const app = initializeApp(firebaseConfig)
 
+// get storage
+export const storage = getStorage(app)
 // init services
 export const db = getFirestore(app)
 
+
 // collection reference
-export const colRef = collection(db, "posts")
+// export const colRef = collection(db, "posts")
 
 // get collection data
-getDocs(colRef)
-    .then((snapshot) => {
-        console.log(snapshot.docs)
-    })
+// getDocs(colRef)
+//     .then((snapshot) => {
+//         console.log(snapshot.docs)
+//     })
     
 // queries
-export const q = query(colRef, orderBy("createdAt"))
+// export const q = query(colRef, orderBy("createdAt"))
