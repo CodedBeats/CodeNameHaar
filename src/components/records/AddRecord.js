@@ -13,8 +13,6 @@ import Footer from "../nav/Footer"
 import { db, storage } from "../firebase/firebaseConfig"
 
 
-// change bootstrap to imported css styles after
-
 const AddRecord = () => {
 
     const [progress, setProgress] = useState(0)
@@ -119,13 +117,13 @@ const AddRecord = () => {
                     {/* progress bar */}
                     {progress === 0 ? null :(
                     <div className="progress">
-                        <div className="progress-bar progress-bar-striped mt-2" style={{width: `${progress}%`}}>
+                        <div className="" style={{width: `${progress}%`}}>
                             {`Uploading Image ${progress}%`}
                         </div>
                     </div>
                     )}
                     {/* add record button */}
-                    <button className="form-control btn-primary mt-2" onClick={handleSubmit}>Publish</button>
+                    <button className="" onClick={handleSubmit}>Publish</button>
                 
                 </div>
             </div>

@@ -26,7 +26,7 @@ const Records = () => {
                 ...doc.data(),
             }))
             setRecords(records)
-            console.log(records)
+            // console.log(records)
         })
     },[])
     
@@ -65,7 +65,6 @@ const Records = () => {
                             )
                         }
                     </div>
-
                 </div>  
             </div>
             <Footer />

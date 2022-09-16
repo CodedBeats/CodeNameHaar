@@ -1,5 +1,4 @@
 // dependencies
-import { useState } from "react"
 import { deleteDoc, doc } from "firebase/firestore"
 import { deleteObject, ref } from "firebase/storage"
 import { toast } from "react-toastify"
@@ -31,7 +30,7 @@ const DeleteRecord = (props) => {
     
     return ( 
         <div>
-            <button className="btn btn-danger" onClick={handleDelete}>Delete</button>
+            <button className="" onClick={handleDelete}>Delete</button>
         </div>
     );
 }

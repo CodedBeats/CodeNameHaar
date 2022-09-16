@@ -72,8 +72,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Todo
 
-- [ ] turn react form into re-usable component for projects (maybe with lots of props, figgure out the {...props} thing)
+- [ ] turn react form into re-usable component for projects (maybe with lots of props)
 - [ ] create not found page
+- [ ] create loading bar for image upload
+- [ ] change form field requirements to not require image
 - [ ] Add login auth
 - [ ] react form
 - [ ] investigate firebase security rules
