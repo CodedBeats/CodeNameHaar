@@ -20,15 +20,3 @@ export const storage = getStorage(app)
 // init services
 export const db = getFirestore(app)
 
-
-// collection reference
-// export const colRef = collection(db, "posts")
-
-// get collection data
-// getDocs(colRef)
-//     .then((snapshot) => {
-//         console.log(snapshot.docs)
-//     })
-    
-// queries
-// export const q = query(colRef, orderBy("createdAt"))
