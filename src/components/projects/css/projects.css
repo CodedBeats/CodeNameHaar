@@ -1,0 +1,15 @@
+.no-projects {
+    font-size: 1.2rem;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.project-container {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(230, 230, 230);
+}

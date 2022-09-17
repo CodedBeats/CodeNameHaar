@@ -82,6 +82,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - [ ] change comments to use better comments extension
 - [ ] add styling to records and add record form
 - [ ] add edit record functionality
+- [ ] add fonts
 
 #### Completed
 - [X] react form

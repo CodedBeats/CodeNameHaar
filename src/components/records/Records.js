@@ -46,25 +46,25 @@ const Records = () => {
 
                     <div className="records">
                         {
-                            // if no records: display message
-                            records.length === 0 ? (
-                                <p className="no-records">No Records Found</p>
-                            ):(
-                                // else: cycle through records array to display each record in this format
-                                records.map(({id, title, content, imageUrl, createdAt}) => 
-                                    <div key={id} className="record-container" >
-                                        <div className="image-container">
-                                            {<img src={imageUrl} alt="img-title" />}
-                                        </div>
-                                        <div className="text-container">
-                                            <h3>{title}</h3>
-                                            <h4>{createdAt.toDate().toDateString()}</h4>
-                                            <p>{content}</p>
-                                            <DeleteRecord id={id} imageUrl={imageUrl} />
-                                        </div>
-                                    </div> 
-                                )
+                        // if no records: display message
+                        records.length === 0 ? (
+                            <p className="no-records">No Records Found</p>
+                        ):(
+                            // else: cycle through records array to display each record in this format
+                            records.map(({id, title, content, imageUrl, createdAt}) => 
+                                <div key={id} className="record-container" >
+                                    <div className="image-container">
+                                        {<img src={imageUrl} alt="img-title" />}
+                                    </div>
+                                    <div className="text-container">
+                                        <h3>{title}</h3>
+                                        <h4>{createdAt.toDate().toDateString()}</h4>
+                                        <p>{content}</p>
+                                        <DeleteRecord id={id} imageUrl={imageUrl} />
+                                    </div>
+                                </div> 
                             )
+                        )
                         }
                     </div>
                 </div>  
