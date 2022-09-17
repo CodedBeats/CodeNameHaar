@@ -10,12 +10,13 @@ import { db, storage } from "../firebase/firebaseConfig"
 
 const DeleteRecord = (props) => {
 
+    // set up props
     let id = props.id
     let imageUrl = props.imageUrl
 
     const handleDelete = async() => {
         try {
-            // delete document from records
+            // delete document from records (await cause async func)
             await deleteDoc(doc(db, "records", id))
             toast("Record Deleted Successfully", {type: "success"})
             // delete image from storage
@@ -30,7 +31,7 @@ const DeleteRecord = (props) => {
     
     return ( 
         <div>
-            <button className="" onClick={handleDelete}>Delete</button>
+            <button className="delete-record-button" onClick={handleDelete}>Delete</button>
         </div>
     );
 }

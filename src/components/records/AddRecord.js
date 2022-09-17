@@ -15,7 +15,9 @@ import { db, storage } from "../firebase/firebaseConfig"
 
 const AddRecord = () => {
 
+    // set progress to update progress bar
     const [progress, setProgress] = useState(0)
+    // set data as object rather than individual states
     const [formData, setFormData] = useState({
         tite: "",
         content: "",
@@ -23,27 +25,29 @@ const AddRecord = () => {
         createdAt: Timestamp.now().toDate(),
     })
 
-    // handle text and image state changes + handleSubmit fun
+    // handle text and image state changes
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value })
     }
     const handleImageChange = (e) => {
         setFormData({ ...formData, image: e.target.files[0] })
     }
+
+
     const handleSubmit = () => {
         // check to see if any field hasn't been filled
-        if (!formData.title || !formData.content || !formData.image) {
-            alert("Please fill all fields before submitting")
+        if (!formData.title || !formData.content) {
+            alert("Please fill all fields before submitting (img not required")
             return
         }
 
-        // store images in a folder with the current time applied to each name so nothing overlaps
+        // store images in a folder with the current time applied to each name so no files overwrite
         const storageRef = ref(storage, `/images/${Date.now()}${formData.image.name}`)
         const uploadImage = uploadBytesResumable(storageRef, formData.image) 
 
         // handle image upload
         uploadImage.on("state_changed", (snapshot) => {
-            //get progress percentage with: (current / total) * 100
+            // get progress percentage with equation: (current / total) * 100
             const progressPercentage = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100)
             setProgress(progressPercentage)
         }, (err) => {
@@ -54,7 +58,7 @@ const AddRecord = () => {
             setFormData({
                 title: "",
                 content: "",
-                image : "",
+                image: "",
             })
 
             getDownloadURL(uploadImage.snapshot.ref)
@@ -86,9 +90,9 @@ const AddRecord = () => {
 
             <div className="page-container">
                 <div className="body-container">
-
                     <h2>Add A Record</h2>
 
+                    {/* title */}
                     <label htmlFor="">Title</label>
                     <input 
                         type="text" 
@@ -97,7 +101,7 @@ const AddRecord = () => {
                         onChange={(e) => handleChange(e)}
                     />
 
-                    {/* content */}
+                    {/* text content */}
                     <label htmlFor="">Content</label>
                     <textarea 
                         name="content" 
@@ -122,7 +126,7 @@ const AddRecord = () => {
                         </div>
                     </div>
                     )}
-                    {/* add record button */}
+                    {/* publish record button */}
                     <button className="" onClick={handleSubmit}>Publish</button>
                 
                 </div>

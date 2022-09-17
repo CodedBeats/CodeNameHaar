@@ -5,6 +5,7 @@ import { collection, query, orderBy, onSnapshot } from "firebase/firestore"
 
 // style
 import "../misc/css/page-container.css"
+import "./css/records.css"
 
 // components/variables
 import Navbar from "../nav/Navbar"
@@ -14,9 +15,10 @@ import { db } from "../firebase/firebaseConfig"
 
 const Records = () => {
 
+    // define records as array
     const [records, setRecords] = useState([])
 
-    // get records from database
+    // populate records array from firebase database
     useEffect(() => {
         const recordRef = collection(db, "records")
         const q = query(recordRef, orderBy("createdAt", "desc"))
@@ -36,22 +38,23 @@ const Records = () => {
             
             <div className="page-container">
                 <div className="body-container">
-
                     <h2>Records</h2>
 
                     <Link className="" to="/records/add">
                         Add Record
                     </Link>
 
-                    <div>
+                    <div className="records">
                         {
+                            // if no records: display message
                             records.length === 0 ? (
-                                <p>No Records Found</p>
+                                <p className="no-records">No Records Found</p>
                             ):(
+                                // else: cycle through records array to display each record in this format
                                 records.map(({id, title, content, imageUrl, createdAt}) => 
-                                    <div key={id}>
+                                    <div key={id} className="record-container" >
                                         <div className="image-container">
-                                            <img src={imageUrl} alt="img-title" />
+                                            {<img src={imageUrl} alt="img-title" />}
                                         </div>
                                         <div className="text-container">
                                             <h3>{title}</h3>
@@ -61,7 +64,6 @@ const Records = () => {
                                         </div>
                                     </div> 
                                 )
-                                
                             )
                         }
                     </div>
