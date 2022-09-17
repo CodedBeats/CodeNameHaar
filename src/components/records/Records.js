@@ -53,15 +53,10 @@ const Records = () => {
                             // else: cycle through records array to display each record in this format
                             records.map(({id, title, content, imageUrl, createdAt}) => 
                                 <div key={id} className="record-container" >
-                                    <div className="image-container">
-                                        {<img src={imageUrl} alt="img-title" />}
-                                    </div>
-                                    <div className="text-container">
-                                        <h3>{title}</h3>
-                                        <h4>{createdAt.toDate().toDateString()}</h4>
-                                        <p>{content}</p>
-                                        <DeleteRecord id={id} imageUrl={imageUrl} />
-                                    </div>
+                                    <h3>{title}</h3>
+                                    <h4>{createdAt.toDate().toDateString()}</h4>
+                                    <p>{content}</p>
+                                    <DeleteRecord id={id} imageUrl={imageUrl} />
                                 </div> 
                             )
                         )

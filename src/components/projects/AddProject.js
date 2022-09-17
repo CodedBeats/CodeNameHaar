@@ -37,7 +37,7 @@ const AddProject = () => {
     const handleSubmit = () => {
         // check to see if any field hasn't been filled
         if (!formData.title || !formData.content|| !formData.image) {
-            alert("Please fill all fields before submitting (img required")
+            alert("Please fill all fields before submitting (img required)")
             return
         }
 
