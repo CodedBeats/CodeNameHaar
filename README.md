@@ -80,11 +80,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - [ ] research search function to add to nav
 - [ ] add scroll to top component
 - [ ] change comments to use better comments extension
-- [ ] add styling to records and add record form
 - [ ] add edit record functionality
 - [ ] add fonts
 
 #### Completed
+- [X] add styling to records and add record form
 - [X] react form
 - [X] change form field requirements to not require image
 - [X] create footer
