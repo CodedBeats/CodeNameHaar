@@ -27,7 +27,7 @@ const DeleteRecord = (props) => {
     
     return ( 
         <div className="delete-container">
-            <button className="delete-button" onClick={handleDelete}>Delete</button>
+            <button className="gradiant-button" onClick={handleDelete}>Delete</button>
         </div>
     );
 }

@@ -13,12 +13,15 @@
     border: 3px solid rgb(0, 0, 0);
     padding: 5px;
     margin: 30px;
+    max-width: 300px;
 }
 .record-container:nth-child(odd) {
-    background-image: linear-gradient(to bottom, #b96000, #c12a2d, #b20054, #85007a, #002196);
+    /* background-image: linear-gradient(to bottom, #b96000, #c12a2d, #b20054, #85007a, #002196); */
+    background-color: rgb(99, 99, 99);
 }
 .record-container:nth-child(even) {
-    background-image: linear-gradient(to bottom, #20b300, #729400, #957100, #a84800, #ac0000);
+    /* background-image: linear-gradient(to bottom, #20b300, #729400, #957100, #a84800, #ac0000); */
+    background-color: rgb(99, 99, 99);
 }
 .record-field {
     text-align: center;
@@ -52,7 +55,65 @@
 
 
 /* === Add Record Form === */
-
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-box {
+    width: 700px;
+    padding: 40px;
+    margin: 50px;
+    background: rgb(100,100,100);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+.form-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+}
+.form-box .field-box {
+    position: relative;
+}
+.form-box .field-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: white;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+input::placeholder {
+    color: rgb(199, 199, 199);
+}
+.dropdown {
+    display: flex;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #fff;
+}
+.dropdown label {
+    padding: 10px 20px 10px 0px;
+}
+.dropdown select {
+    background: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    border-bottom: none;
+    color: rgb(255, 255, 255);
+}
+.dropdown select option {
+    color: rgb(0, 0, 0);
+}
+.dropdown label {
+    font-size: 20px;
+    color: rgb(199, 199, 199);
+}
 /* ======= */
 
 
@@ -63,7 +124,7 @@
     justify-content: center;
     align-items: center;
 }
-.delete-button {
+.gradiant-button {
     width: 220px;
     height: 50px;
     border: none;
@@ -75,7 +136,7 @@
     z-index: 0;
     border-radius: 10px;
 }
-.delete-button:before {
+.gradiant-button:before {
     content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
@@ -91,16 +152,16 @@
     transition: opacity .3s ease-in-out;
     border-radius: 10px;
 }
-.delete-button:active {
+.gradiant-button:active {
     color: #000
 }
-.delete-button:active:after {
+.gradiant-button:active:after {
     background: transparent;
 }
-.delete-button:hover:before {
+.gradiant-button:hover:before {
     opacity: 1;
 }
-.delete-button:after {
+.gradiant-button:after {
     z-index: -1;
     content: '';
     position: absolute;

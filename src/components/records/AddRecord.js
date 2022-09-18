@@ -79,104 +79,137 @@ const AddRecord = () => {
 
             <div className="page-container">
                 <div className="body-container">
-                    <h2>Add A Record</h2>
+                    <div className="form-container">
+                    <div className="form-box">
+                        <h2>Add A Record</h2>
 
-                    {/* age */}
-                    <label htmlFor="">Age</label>
-                    <input 
-                        type="text" 
-                        name="age" 
-                        value={formData.age}
-                        onChange={(e) => handleChange(e)}
-                    />
+                        <div className="field-box">
+                            {/* age */}
+                            <label htmlFor=""></label>
+                            <input 
+                                type="text" 
+                                name="age" 
+                                placeholder="Age"
+                                value={formData.age}
+                                onChange={(e) => handleChange(e)}
+                            />
+                        </div>
 
-                    {/* birthday */}
-                    <label htmlFor="">Birthday</label>
-                    <input 
-                        type="text" 
-                        name="birthday"  
-                        value={formData.birthday}
-                        onChange={(e) => handleChange(e)}
-                    />
+                        <div className="field-box">
+                            {/* birthday */}
+                            <label htmlFor=""></label>
+                            <input 
+                                type="text" 
+                                name="birthday"  
+                                placeholder="Birthday"
+                                value={formData.birthday}
+                                onChange={(e) => handleChange(e)}
+                            />
+                        </div>
 
-                    {/* gender */}
-                    <label htmlFor="">Gender</label>
-                    <select
-                        name="gender"
-                        value={formData.favColor}
-                        onChange={handleChange}
-                    >
-                        <option value="">-- Choose --</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                    </select>
-                    
-                    {/* info */}
-                    <label htmlFor="">Information</label>
-                    <textarea 
-                        name="info" 
-                        value={formData.info}
-                        onChange={(e) => handleChange(e)}
-                    />
-                    
-                    {/* job */}
-                    <label htmlFor="">Job</label>
-                    <input 
-                        type="text" 
-                        name="job"  
-                        value={formData.job}
-                        onChange={(e) => handleChange(e)}
-                    />
-                    
-                    {/* last meet */}
-                    <label htmlFor="">Last Meet</label>
-                    <input 
-                        type="text" 
-                        name="lastMeet"   
-                        value={formData.lastMeet}
-                        onChange={(e) => handleChange(e)}
-                    />
-                    
-                    {/* living status */}
-                    <label htmlFor="">Living Status</label>
-                    <input 
-                        type="text" 
-                        name="livingStatus"   
-                        value={formData.livingStatus}
-                        onChange={(e) => handleChange(e)}
-                    />
-                    
-                    {/* location */}
-                    <label htmlFor="">Location</label>
-                    <input 
-                        type="text" 
-                        name="location"   
-                        value={formData.location}
-                        onChange={(e) => handleChange(e)}
-                    />
-                    
-                    {/* name */}
-                    <label htmlFor="">Name</label>
-                    <input 
-                        type="text" 
-                        name="name"   
-                        value={formData.name}
-                        onChange={(e) => handleChange(e)}
-                    />
-                    
-                    {/* relationship status */}
-                    <label htmlFor="">Relationship Status</label>
-                    <input 
-                        type="text" 
-                        name="relationshipStatus"   
-                        value={formData.relationshipStatus}
-                        onChange={(e) => handleChange(e)}
-                    />
+                        <div className="field-box dropdown">
+                            {/* gender */}
+                            <label htmlFor="">Gender</label>
+                            <select
+                                name="gender"
+                                value={formData.favColor}
+                                onChange={handleChange}
+                            >
+                                <option value="">-- Choose --</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div className="field-box">
+                            {/* info */}
+                            <label htmlFor=""></label>
+                            <input 
+                                type="text" 
+                                name="info"  
+                                placeholder="Information"
+                                value={formData.info}
+                                onChange={(e) => handleChange(e)}
+                            />
+                        </div>
+                        
+                        <div className="field-box">
+                            {/* job */}
+                            <label htmlFor=""></label>
+                            <input 
+                                type="text" 
+                                name="job"  
+                                placeholder="Job"
+                                value={formData.job}
+                                onChange={(e) => handleChange(e)}
+                            />
+                        </div>
+                        
+                        <div className="field-box">
+                            {/* last meet */}
+                            <label htmlFor=""></label>
+                            <input 
+                                type="text" 
+                                name="lastMeet"   
+                                placeholder="Last Meet"
+                                value={formData.lastMeet}
+                                onChange={(e) => handleChange(e)}
+                            />
+                        </div>
+                        
+                        <div className="field-box">
+                            {/* living status */}
+                            <label htmlFor=""></label>
+                            <input 
+                                type="text" 
+                                name="livingStatus"   
+                                placeholder="Living Status"
+                                value={formData.livingStatus}
+                                onChange={(e) => handleChange(e)}
+                            />
+                        </div>
+                        
+                        <div className="field-box">
+                            {/* location */}
+                            <label htmlFor=""></label>
+                            <input 
+                                type="text" 
+                                name="location"   
+                                placeholder="Location"
+                                value={formData.location}
+                                onChange={(e) => handleChange(e)}
+                            />
+                        </div>
+                        
+                        <div className="field-box">
+                            {/* name */}
+                            <label htmlFor=""></label>
+                            <input 
+                                type="text" 
+                                name="name"   
+                                placeholder="Name"
+                                value={formData.name}
+                                onChange={(e) => handleChange(e)}
+                            />
+                        </div>
+                        
+                        <div className="field-box">
+                            {/* relationship status */}
+                            <label htmlFor=""></label>
+                            <input 
+                                type="text" 
+                                name="relationshipStatus"   
+                                placeholder="Relationship Status"
+                                value={formData.relationshipStatus}
+                                onChange={(e) => handleChange(e)}
+                            />
+                        </div>
 
-                    {/* publish record button */}
-                    <button className="" onClick={handleSubmit}>Publish</button>
-                
+                        {/* publish record button */}
+                        <button className="gradiant-button" onClick={handleSubmit}>Publish</button>
+                    </div>
+                    </div>
                 </div>
             </div>
             <Footer />
