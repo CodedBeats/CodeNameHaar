@@ -51,13 +51,21 @@ const Records = () => {
                             <p className="no-records">No Records Found</p>
                         ):(
                             // else: cycle through records array to display each record in this format
-                            records.map(({id, title, content, imageUrl, createdAt}) => 
+                            records.map(({id, age, birthday, createdAt, gender, info, job, lastMeet, livingStatus, location, name, relationshipStatus}) => 
                                 <div key={id} className="record-container" >
-                                    <h3>{title}</h3>
-                                    <h4>{createdAt.toDate().toDateString()}</h4>
-                                    <p>{content}</p>
-                                    <DeleteRecord id={id} imageUrl={imageUrl} />
-                                </div> 
+                                    <p>{name}</p>
+                                    <p>{info}</p>
+                                    <p>{age}</p>
+                                    <p>{birthday}</p>
+                                    <p>{gender}</p>
+                                    <p>{job}</p>
+                                    <p>{lastMeet}</p>
+                                    <p>{livingStatus}</p>
+                                    <p>{location}</p>
+                                    <p>{relationshipStatus}</p>
+                                    <p>{createdAt.toDate().toDateString()}</p>
+                                    <DeleteRecord id={id} />
+                                </div>
                             )
                         )
                         }
