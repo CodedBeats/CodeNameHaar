@@ -5,6 +5,7 @@ import { toast } from "react-toastify"
 
 // style
 import "../misc/css/page-container.css"
+import "./css/records.css"
 
 // components
 import Navbar from "../nav/Navbar"
@@ -105,6 +106,7 @@ const AddRecord = () => {
                         value={formData.favColor}
                         onChange={handleChange}
                     >
+                        <option value="">-- Choose --</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                         <option value="other">Other</option>

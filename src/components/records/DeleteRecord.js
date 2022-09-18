@@ -1,9 +1,9 @@
 // dependencies
 import { deleteDoc, doc } from "firebase/firestore"
-import { deleteObject, ref } from "firebase/storage"
 import { toast } from "react-toastify"
 
 // style
+import "./css/records.css"
 
 // components
 import { db } from "../firebase/firebaseConfig"
@@ -26,8 +26,8 @@ const DeleteRecord = (props) => {
     }
     
     return ( 
-        <div>
-            <button className="delete-record-button" onClick={handleDelete}>Delete</button>
+        <div className="delete-container">
+            <button className="delete-button" onClick={handleDelete}>Delete</button>
         </div>
     );
 }

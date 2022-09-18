@@ -1,0 +1,123 @@
+/* === Records Display === */
+.no-records {
+    font-size: 1.2rem;
+}
+.records {
+    display: flex;
+}
+.record-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 5px;
+    margin: 30px;
+}
+.record-container:nth-child(odd) {
+    background-image: linear-gradient(to bottom, #b96000, #c12a2d, #b20054, #85007a, #002196);
+}
+.record-container:nth-child(even) {
+    background-image: linear-gradient(to bottom, #20b300, #729400, #957100, #a84800, #ac0000);
+}
+.record-field {
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    border-top: 2px solid rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+.record-field:hover {
+    background: rgb(0, 0, 0) !important;
+}
+.record-field:nth-child(odd) {
+    background: none;
+}
+.record-field:nth-child(even) {
+    background: none;
+}
+.field-title {
+    color: rgb(255, 255, 255);
+    margin: 10px;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+.field-value {
+    color: rgb(255, 255, 255);
+    margin: 5px;
+    font-size: 1.2rem;
+}
+/* ======= */
+
+
+
+/* === Add Record Form === */
+
+/* ======= */
+
+
+
+/* === Delete Button === */
+.delete-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.delete-button {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+.delete-button:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+.delete-button:active {
+    color: #000
+}
+.delete-button:active:after {
+    background: transparent;
+}
+.delete-button:hover:before {
+    opacity: 1;
+}
+.delete-button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+/* ======= */
+
+
+
+/* === Animations === */
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}

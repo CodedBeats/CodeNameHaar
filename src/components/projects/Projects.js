@@ -58,8 +58,8 @@ const Projects = () => {
                                     </div>
                                     <div className="text-container">
                                         <h3>{title}</h3>
-                                        <h4>{createdAt.toDate().toDateString()}</h4>
                                         <p>{content}</p>
+                                        <p>{createdAt.toDate().toDateString()}</p>
                                         <DeleteProject id={id} imageUrl={imageUrl} />
                                     </div>
                                 </div> 
