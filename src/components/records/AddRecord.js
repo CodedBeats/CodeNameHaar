@@ -35,6 +35,7 @@ const AddRecord = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value })
     }
 
+    // handle add record
     const handleSubmit = () => {
         // check to see if any field hasn't been filled
         if (

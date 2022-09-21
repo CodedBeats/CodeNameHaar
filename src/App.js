@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Routes , Route } from "react-router-dom"
 
 
 // ==components==
-// dashboard
+// general
 import Dashboard from "./components/dashboard/Dashboard"
+import Login from "./components/auth/Login"
 
 // misc
 // import NotFound from "./components/misc/NotFound"
 
-// records
+// records and projects
 import Records from "./components/records/Records"
 import AddRecord from "./components/records/AddRecord"
 import Projects from "./components/projects/Projects"
@@ -23,6 +24,7 @@ const App = () => {
         <Router>
             <Routes>
                 <Route path="/" element={<Dashboard />} />
+                <Route path="/login" element={<Login />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/projects/add" element={<AddProject />} />
                 <Route path="/records" element={<Records />} />

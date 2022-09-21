@@ -16,12 +16,12 @@
     max-width: 300px;
 }
 .record-container:nth-child(odd) {
-    /* background-image: linear-gradient(to bottom, #b96000, #c12a2d, #b20054, #85007a, #002196); */
-    background-color: rgb(99, 99, 99);
+    background-image: linear-gradient(to bottom, #b96000, #c12a2d, #b20054, #85007a, #002196);
+    /* background-color: rgb(99, 99, 99); */
 }
 .record-container:nth-child(even) {
-    /* background-image: linear-gradient(to bottom, #20b300, #729400, #957100, #a84800, #ac0000); */
-    background-color: rgb(99, 99, 99);
+    background-image: linear-gradient(to bottom, #20b300, #729400, #957100, #a84800, #ac0000);
+    /* background-color: rgb(99, 99, 99); */
 }
 .record-field {
     text-align: center;

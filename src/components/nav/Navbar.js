@@ -18,6 +18,7 @@ const Navbar = () => {
             <ul>
                 <CustomLink to="/projects">Projects</CustomLink>
                 <CustomLink to="/records">Records</CustomLink>
+                <CustomLink to="/login">Login</CustomLink>
                 {/* <CustomLink to="/">Login</CustomLink> */}
             </ul>
         </div>
