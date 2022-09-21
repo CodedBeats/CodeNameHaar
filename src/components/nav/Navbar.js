@@ -24,17 +24,22 @@ const Navbar = () => {
                 <CustomLink to="/projects">Projects</CustomLink>
                 <CustomLink to="/records">Records</CustomLink>
 
+                {/* if logged in -> logout, else login */}
                 {
-                    user && (
-                        <>
-                            <span className="">User: {user.displayName || user.email}</span>
-                            <button className="" onClick={() => {signOut(auth)}}>Logout</button>
-                        </>
-                    )
+                user ? (
+                    <>
+                    <div>
+                        <span className="">Logged In</span>
+                        <button className="" onClick={() => {signOut(auth)}}>Logout</button>
+                    </div>
+                    <CustomLink to="/profile">Profile</CustomLink>
+                    </>
+                ):(
+                    <>
+                    <CustomLink to="/login">Login</CustomLink>
+                    </>
+                )
                 }
-
-                <CustomLink to="/login">Login</CustomLink>
-                {/* <CustomLink to="/">Login</CustomLink> */}
             </ul>
         </div>
     );

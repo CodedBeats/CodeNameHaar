@@ -26,7 +26,7 @@ const Login = () => {
         try {
             await signInWithEmailAndPassword(auth, email, password)
             // change to user dashboard
-            navigate("/")
+            navigate("/profile")
         } catch (err) {
             toast(err.code, {type: "error"})
         }

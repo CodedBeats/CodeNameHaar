@@ -2,6 +2,7 @@
 import { useState } from "react"
 import { addDoc, collection, Timestamp } from "firebase/firestore"
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage"
+import { useAuthState } from "react-firebase-hooks/auth"
 import { toast } from "react-toastify"
 
 // style
@@ -10,11 +11,12 @@ import "../misc/css/page-container.css"
 // components
 import Navbar from "../nav/Navbar"
 import Footer from "../nav/Footer"
-import { db, storage } from "../firebase/firebaseConfig"
+import { db, storage, auth } from "../firebase/firebaseConfig"
 
 
 const AddProject = () => {
-
+    // get user for auth
+    const [user] = useAuthState(auth)
     // set progress to update progress bar
     const [progress, setProgress] = useState(0)
     // set data as object rather than individual states
@@ -85,54 +87,63 @@ const AddProject = () => {
     
 
     return (
-        <div className="container">
-            <Navbar />
+        <>
+        {/* if logged in -> display page, else NotFound */}
+        { user ? ( 
+            <div className="container">
+                <Navbar />
 
-            <div className="page-container">
-                <div className="body-container">
-                    <h2>Add A Project</h2>
+                <div className="page-container">
+                    <div className="body-container">
+                        <h2>Add A Project</h2>
 
-                    {/* title */}
-                    <label htmlFor="">Title</label>
-                    <input 
-                        type="text" 
-                        name="title" 
-                        value={formData.title}
-                        onChange={(e) => handleChange(e)}
-                    />
+                        {/* title */}
+                        <label htmlFor="">Title</label>
+                        <input 
+                            type="text" 
+                            name="title" 
+                            value={formData.title}
+                            onChange={(e) => handleChange(e)}
+                        />
 
-                    {/* text content */}
-                    <label htmlFor="">Content</label>
-                    <textarea 
-                        name="content" 
-                        value={formData.content}
-                        onChange={(e) => handleChange(e)}
-                    />
+                        {/* text content */}
+                        <label htmlFor="">Content</label>
+                        <textarea 
+                            name="content" 
+                            value={formData.content}
+                            onChange={(e) => handleChange(e)}
+                        />
 
-                    {/* image  */}
-                    <label htmlFor="">Image</label>
-                    <input 
-                        type="file" 
-                        name="image" 
-                        accept="image/*" 
-                        onChange={(e) => handleImageChange(e)}
-                    />
+                        {/* image  */}
+                        <label htmlFor="">Image</label>
+                        <input 
+                            type="file" 
+                            name="image" 
+                            accept="image/*" 
+                            onChange={(e) => handleImageChange(e)}
+                        />
 
-                    {/* progress bar */}
-                    {progress === 0 ? null :(
-                    <div className="progress">
-                        <div className="" style={{width: `${progress}%`}}>
-                            {`Uploading Image ${progress}%`}
+                        {/* progress bar */}
+                        {progress === 0 ? null :(
+                        <div className="progress">
+                            <div className="" style={{width: `${progress}%`}}>
+                                {`Uploading Image ${progress}%`}
+                            </div>
                         </div>
+                        )}
+                        {/* publish project button */}
+                        <button className="" onClick={handleSubmit}>Publish</button>
+                    
                     </div>
-                    )}
-                    {/* publish project button */}
-                    <button className="" onClick={handleSubmit}>Publish</button>
-                
                 </div>
+                <Footer />
             </div>
-            <Footer />
-        </div>
+        ):(
+            <>
+                Not Found Page
+            </>
+        )}
+        </>
     );
 }
  

@@ -40,10 +40,6 @@ const Records = () => {
                 <div className="body-container">
                     <h2>Records</h2>
 
-                    <Link className="" to="/records/add">
-                        Add Record
-                    </Link>
-
                     <div className="records">
                         {
                         // if no records: display message

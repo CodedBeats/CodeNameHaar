@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes , Route } from "react-router-dom"
 // general
 import Dashboard from "./components/dashboard/Dashboard"
 import Login from "./components/auth/Login"
+import Profile from "./components/dashboard/Profile"
 
 // misc
 // import NotFound from "./components/misc/NotFound"
@@ -25,6 +26,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/profile" element={<Profile />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/projects/add" element={<AddProject />} />
                 <Route path="/records" element={<Records />} />

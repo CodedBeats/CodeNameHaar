@@ -73,15 +73,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ## Todo
 
 - [ ] turn react form into re-usable component for projects (maybe with lots of props)
-- [ ] create not found page
+- [ ] create not found page for no page and missing permissions
 - [ ] create loading bar for image upload
-- [ ] Add login auth
 - [ ] investigate firebase security rules
 - [ ] research search function to add to nav
 - [ ] add scroll to top component
 - [ ] change comments to use better comments extension
 - [ ] add edit record functionality
 - [ ] add fonts
+- [ ] add profile page
+- [ ] structure project for consistent indentation
+
+
 
 #### Completed
 - [X] add styling to records and add record form
@@ -89,3 +92,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - [X] change form field requirements to not require image
 - [X] create footer
 - [X] move the add page link for projects and records to their individual pages and remove from navbar
+- [X] Add login auth

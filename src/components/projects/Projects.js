@@ -40,10 +40,6 @@ const Projects = () => {
                 <div className="body-container">
                     <h2>Projects</h2>
 
-                    <Link className="" to="/projects/add">
-                        Add Project
-                    </Link>
-
                     <div className="projects">
                         {
                         // if no projects: display message
@@ -64,8 +60,7 @@ const Projects = () => {
                                     </div>
                                 </div> 
                             )
-                        )
-                        }
+                        )}
                     </div>
                 </div>  
             </div>
