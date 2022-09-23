@@ -70,26 +70,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
 
-## Todo
-
-- [ ] turn react form into re-usable component for projects (maybe with lots of props)
-- [ ] create not found page for no page and missing permissions
-- [ ] create loading bar for image upload
-- [ ] investigate firebase security rules
-- [ ] research search function to add to nav
-- [ ] add scroll to top component
-- [ ] change comments to use better comments extension
-- [ ] add edit record functionality
-- [ ] add fonts
-- [ ] add profile page
-- [ ] structure project for consistent indentation
-
-
-
-#### Completed
-- [X] add styling to records and add record form
-- [X] react form
-- [X] change form field requirements to not require image
-- [X] create footer
-- [X] move the add page link for projects and records to their individual pages and remove from navbar
-- [X] Add login auth
+## Read Me All Over

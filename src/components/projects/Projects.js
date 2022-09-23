@@ -1,5 +1,4 @@
 // dependencies
-import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore"
 

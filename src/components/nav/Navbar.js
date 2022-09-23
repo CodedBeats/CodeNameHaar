@@ -1,7 +1,6 @@
 // dependencies
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
 import { useAuthState } from "react-firebase-hooks/auth"
-import { signOut } from "firebase/auth"
 
 // style
 import "./css/navbar.css"
@@ -28,10 +27,6 @@ const Navbar = () => {
                 {
                 user ? (
                     <>
-                    <div>
-                        <span className="">Logged In</span>
-                        <button className="" onClick={() => {signOut(auth)}}>Logout</button>
-                    </div>
                     <CustomLink to="/profile">Profile</CustomLink>
                     </>
                 ):(

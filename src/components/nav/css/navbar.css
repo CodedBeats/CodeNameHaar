@@ -126,3 +126,8 @@
     background-color: rgb(219, 219, 219);
     color: rgb(0, 161, 94);
 }
+
+.loged-in-container {
+    display: flex;
+    flex-direction: column;
+}
