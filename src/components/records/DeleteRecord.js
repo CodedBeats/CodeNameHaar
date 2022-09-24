@@ -1,4 +1,5 @@
 // dependencies
+import { Link } from "react-router-dom"
 import { deleteDoc, doc } from "firebase/firestore"
 import { toast } from "react-toastify"
 
@@ -27,7 +28,9 @@ const DeleteRecord = (props) => {
     
     return ( 
         <div className="delete-container">
-            <button className="gradiant-button" onClick={handleDelete}>Delete</button>
+            <Link to="/records">
+                <button className="gradiant-button" onClick={handleDelete}>Delete</button>
+            </Link>
         </div>
     );
 }

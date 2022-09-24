@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { doc, onSnapshot } from "firebase/firestore"
-import { useAuthState } from "react-firebase-hooks/auth"
 
 // style
 import "../misc/css/page-container.css"
@@ -11,15 +10,13 @@ import "./css/records.css"
 // components/variables
 import Navbar from "../nav/Navbar"
 import Footer from "../nav/Footer"
-import NotFound from "../misc/NotFound"
 import DeleteRecord from "./DeleteRecord"
-import { db, auth } from "../firebase/firebaseConfig"
+import { db } from "../firebase/firebaseConfig"
 
 const Record = () => {
 
     const {id} = useParams()
     const [record, setRecord] = useState(null)
-    const [user] = useAuthState(auth)
 
     useEffect(() => {
         const docRef = doc(db, "records", id)
@@ -29,8 +26,6 @@ const Record = () => {
     })
 
     return ( 
-        <>
-        { user ? (
         <div className="container">
             <Navbar />
             <div className="page-container">
@@ -89,12 +84,6 @@ const Record = () => {
             </div>
             <Footer />
         </div>
-        ) : (
-            <>
-                <NotFound notFound={false} wrongPermissions={true} />
-            </>
-        )}
-        </>
     );
 }
  

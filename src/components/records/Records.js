@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore"
+import { useAuthState } from "react-firebase-hooks/auth"
 
 // style
 import "../misc/css/page-container.css"
@@ -10,12 +11,14 @@ import "./css/records.css"
 // components/variables
 import Navbar from "../nav/Navbar"
 import Footer from "../nav/Footer"
-import { db } from "../firebase/firebaseConfig"
+import NotFound from "../misc/NotFound"
+import { db, auth } from "../firebase/firebaseConfig"
 
 const Records = () => {
 
     // define records as array
     const [records, setRecords] = useState([])
+    const [user] = useAuthState(auth)
 
     // populate records array from firebase database
     useEffect(() => {
@@ -32,6 +35,8 @@ const Records = () => {
     },[])
     
     return (
+        <>
+        { user ? (
         <div className="container">
             <Navbar />
             
@@ -63,6 +68,12 @@ const Records = () => {
             </div>
             <Footer />
         </div>
+        ) : (
+            <>
+                <NotFound notFound={false} wrongPermissions={true} />
+            </>
+        )}
+        </>
     );
 }
  

@@ -20,7 +20,7 @@ const AddRecord = () => {
     const [user] = useAuthState(auth)
     // set data as object rather than individual states
     const [formData, setFormData] = useState({
-        age: null,
+        age: "",
         birthday: "",
         createdAt: Timestamp.now().toDate(),
         gender: "",
