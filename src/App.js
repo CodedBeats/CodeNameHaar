@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes , Route } from "react-router-dom"
 import Dashboard from "./components/dashboard/Dashboard"
 import Login from "./components/auth/Login"
 import Profile from "./components/dashboard/Profile"
+import NotFound from "./components/misc/NotFound"
 
 // misc
 // import NotFound from "./components/misc/NotFound"
@@ -31,7 +32,7 @@ const App = () => {
                 <Route path="/projects/add" element={<AddProject />} />
                 <Route path="/records" element={<Records />} />
                 <Route path="/records/add" element={<AddRecord />} />
-                {/* <Route path="*" element={<NotFound />} /> */}
+                <Route path="*" element={<NotFound notFound={true} wrongPermissions={false} />} />
             </Routes>
         </Router>
     );
