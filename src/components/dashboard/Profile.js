@@ -21,6 +21,7 @@ const Profile = () => {
     // set todos and completed
     const todos = [
         {key: 1, value: "change records to small boxes with just name and click takes to better viewing page"},
+        {key: 2, value: "seperate profiles based on user"},
         {key: 8, value: "add edit record functionality"},
         {key: 9, value: "add fonts"},
         {key: 10, value: "structure project for consistent indentation"},
@@ -43,6 +44,7 @@ const Profile = () => {
         {key: 4, value: "change comments to use better comments extension"},
         {key: 5, value: "firebase security rules for people who can login but can't do what I can"},
         {key: 6, value: "loading bar for project image upload"},
+        {key: 7, value: "relations to people where records can be searched for their similarities"},
     ]
     let listTodos = todos.map(({key, value}) => 
         <Item key={key} text={value} />
