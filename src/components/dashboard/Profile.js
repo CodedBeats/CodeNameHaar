@@ -20,12 +20,16 @@ const Profile = () => {
 
     // set todos and completed
     const todos = [
-        {key: 1, value: "change records to small boxes with just name and click takes to better viewing page"},
-        {key: 2, value: "seperate profiles based on user"},
-        {key: 8, value: "add edit record functionality"},
-        {key: 9, value: "add fonts"},
-        {key: 10, value: "structure project for consistent indentation"},
-        {key: 11, value: "move delete button to individual post and onlly allow if logged in"},
+        {key: 1, value: "seperate profiles based on user"},
+        {key: 2, value: "add edit record functionality"},
+        {key: 3, value: "add fonts"},
+        {key: 4, value: "structure project for consistent indentation"},
+        {key: 5, value: "structure projects to have the same display as records (projects with smaller boxes, project will full view)"},
+        {key: 6, value: "style records"},
+        {key: 7, value: "style projects"},
+        {key: 8, value: "style not found page"},
+        {key: 9, value: "style profile page"},
+        {key: 10, value: "start working on JS lab"},
     ]
     const completedTodos = [
         {key: 1, value: "[X] add styling to records and add record form"},
@@ -36,6 +40,8 @@ const Profile = () => {
         {key: 6, value: "[X] Add login auth"},
         {key: 7, value: "[X] add profile page"},
         {key: 8, value: "[X] create not found page for no page and missing permissions"},
+        {key: 9, value: "[X] change records to small boxes with just name and click takes to better viewing page"},
+        {key: 10, value: "[X] move delete button to individual post and onlly allow if logged in"},
     ]
     const wishlist = [
         {key: 1, value: "eyeballs on image that follow cursor"},
@@ -45,6 +51,7 @@ const Profile = () => {
         {key: 5, value: "firebase security rules for people who can login but can't do what I can"},
         {key: 6, value: "loading bar for project image upload"},
         {key: 7, value: "relations to people where records can be searched for their similarities"},
+        {key: 8, value: "lazy loading on more full pages"},
     ]
     let listTodos = todos.map(({key, value}) => 
         <Item key={key} text={value} />

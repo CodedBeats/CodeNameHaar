@@ -51,7 +51,7 @@ const Records = () => {
                             <p className="no-records">No Records Found</p>
                         ):(
                         // else: cycle through records array to display each record in this format
-                        records.map(({id, name, age}) => 
+                        records.map(({id, name, info}) => 
                             <div key={id} className="record-container" >
                                 <div className="record-field">
                                     <Link to={`/record/${id}`}>
@@ -59,7 +59,7 @@ const Records = () => {
                                     </Link>
                                 </div>
                                 <div className="record-field">
-                                    <p className="field-age">{age}</p>
+                                    <p className="field-info">{info}</p>
                                 </div>
                             </div>
                         ))}
