@@ -30,6 +30,8 @@ const Profile = () => {
         {key: 8, value: "style not found page"},
         {key: 9, value: "style profile page"},
         {key: 10, value: "start working on JS lab"},
+        {key: 11, value: "move hexagons to js lab and make landing page show most recent [project, tech talk] and a short about me"},
+        {key: 12, value: "change footer so it links to website and figure out email link"},
     ]
     const completedTodos = [
         {key: 1, value: "[X] add styling to records and add record form"},
@@ -97,10 +99,6 @@ const Profile = () => {
 
                         <Link className="" to="/projects/add">
                             Add Project
-                        </Link>
-
-                        <Link className="" to="/records/add">
-                            Add Record
                         </Link>
 
                         {/* JS Lab experiments */}

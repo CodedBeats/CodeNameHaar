@@ -5,7 +5,7 @@ import { doc, onSnapshot } from "firebase/firestore"
 
 // style
 import "../misc/css/page-container.css"
-import "./css/records.css"
+// import "./css/record.css"
 
 // components/variables
 import Navbar from "../nav/Navbar"

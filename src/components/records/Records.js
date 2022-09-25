@@ -43,6 +43,7 @@ const Records = () => {
             <div className="page-container">
                 <div className="body-container">
                     <h2>Records</h2>
+                    {user && <Link to="/records/add">Add Record</Link>}
 
                     <div className="records">
                         {
@@ -55,7 +56,7 @@ const Records = () => {
                             <div key={id} className="record-container" >
                                 <div className="record-field">
                                     <Link to={`/record/${id}`}>
-                                        <p className="field-title">{name}</p>
+                                        <p className="field-name">{name}</p>
                                     </Link>
                                 </div>
                                 <div className="record-field">

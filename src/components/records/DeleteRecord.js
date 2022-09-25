@@ -4,7 +4,7 @@ import { deleteDoc, doc } from "firebase/firestore"
 import { toast } from "react-toastify"
 
 // style
-import "./css/records.css"
+import "./css/delete-record.css"
 
 // components
 import { db } from "../firebase/firebaseConfig"

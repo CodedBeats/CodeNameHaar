@@ -6,7 +6,7 @@ import { toast } from "react-toastify"
 
 // style
 import "../misc/css/page-container.css"
-import "./css/records.css"
+import "./css/add-record.css"
 
 // components
 import Navbar from "../nav/Navbar"

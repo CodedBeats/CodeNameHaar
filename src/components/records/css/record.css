@@ -1,0 +1,45 @@
+/* === Records Display === */
+.no-records {
+    font-size: 1.2rem;
+}
+.records {
+    display: flex;
+}
+.record-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 5px;
+    margin: 30px;
+    max-width: 300px;
+}
+.record-field {
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    border-top: 2px solid rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+.record-field:hover {
+    background: rgb(0, 0, 0) !important;
+}
+.record-field:nth-child(odd) {
+    background: none;
+}
+.record-field:nth-child(even) {
+    background: none;
+}
+.field-title {
+    color: rgb(255, 255, 255);
+    margin: 10px;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+.field-value {
+    color: rgb(255, 255, 255);
+    margin: 5px;
+    font-size: 1.2rem;
+}
+/* ======= */
