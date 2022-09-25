@@ -1,6 +1,8 @@
 // dependencies
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore"
+import { useAuthState } from "react-firebase-hooks/auth"
 
 // style
 import "../misc/css/page-container.css"
@@ -10,12 +12,13 @@ import "./css/projects.css"
 import Navbar from "../nav/Navbar"
 import Footer from "../nav/Footer"
 import DeleteProject from "./DeleteProject"
-import { db } from "../firebase/firebaseConfig"
+import { db, auth } from "../firebase/firebaseConfig"
 
 const Projects = () => {
 
     // define projects as array
     const [projects, setProjects] = useState([])
+    const [user] = useAuthState(auth)
 
     // populate projects array from firebase database
     useEffect(() => {
@@ -38,6 +41,7 @@ const Projects = () => {
             <div className="page-container">
                 <div className="body-container">
                     <h2>Projects</h2>
+                    {user && <Link to="/projects/add">Add Project</Link>}
 
                     <div className="projects">
                         {

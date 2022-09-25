@@ -18,7 +18,7 @@
     background: rgb(83, 83, 83);
 }
 
-/* special 6 borders repeating */
+/* special borders repeating */
 .record-container:nth-child(odd) {box-shadow: 0 0 6px 6px rgb(22, 184, 22);}
 .record-container:nth-child(even) {box-shadow: 0 0 6px 6px rgb(11, 182, 174);}
 

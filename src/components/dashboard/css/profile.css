@@ -1,0 +1,22 @@
+/* list */
+.list-header {
+    margin: 30px 0px 10px;
+}
+.list-container {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.todo-container {
+    background-color: #e79600ad;
+}
+.completed-container {
+    background-color: #39db239d;
+}
+.wishlist-container {
+    background-color: #c803cf9a;
+}
+.list-item {
+    padding: 5px 10px;
+    border: 1px solid #ffffff;
+}

@@ -25,7 +25,7 @@ const Profile = () => {
         {key: 3, value: "add fonts"},
         {key: 4, value: "structure project for consistent indentation"},
         {key: 5, value: "structure projects to have the same display as records (projects with smaller boxes, project will full view)"},
-        {key: 6, value: "style records"},
+        {key: 6, value: "style single record item"},
         {key: 7, value: "style projects"},
         {key: 8, value: "style not found page"},
         {key: 9, value: "style profile page"},
@@ -34,17 +34,18 @@ const Profile = () => {
         {key: 12, value: "change footer so it links to website and figure out email link"},
     ]
     const completedTodos = [
-        {key: 1, value: "[X] add styling to records and add record form"},
-        {key: 2, value: "[X] react form"},
-        {key: 3, value: "[X] change form field requirements to not require image"},
-        {key: 4, value: "[X] create footer"},
-        {key: 5, value: "[X] move the add page link for projects and records to their individual pages and remove from navbar"},
-        {key: 6, value: "[X] Add login auth"},
-        {key: 7, value: "[X] add profile page"},
-        {key: 8, value: "[X] create not found page for no page and missing permissions"},
-        {key: 9, value: "[X] change records to small boxes with just name and click takes to better viewing page"},
-        {key: 10, value: "[X] move delete button to individual post and onlly allow if logged in"},
-        {key: 11, value: "[X] add a Tech Talk page for blog posts about cool tech stuff I've found"},
+        {key: 1, value: "add styling to records and add record form"},
+        {key: 2, value: "react form"},
+        {key: 3, value: "change form field requirements to not require image"},
+        {key: 4, value: "create footer"},
+        {key: 5, value: "move the add page link for projects and records to their individual pages and remove from navbar"},
+        {key: 6, value: "Add login auth"},
+        {key: 7, value: "add profile page"},
+        {key: 8, value: "create not found page for no page and missing permissions"},
+        {key: 9, value: "change records to small boxes with just name and click takes to better viewing page"},
+        {key: 10, value: "move delete button to individual post and onlly allow if logged in"},
+        {key: 11, value: "add a Tech Talk page for blog posts about cool tech stuff I've found"},
+        {key: 12, value: "style records"},
     ]
     const wishlist = [
         {key: 1, value: "eyeballs on image that follow cursor"},
@@ -73,39 +74,37 @@ const Profile = () => {
                 <div className="container">
                     <Navbar />
                     <div className="page-container">
+                        <div className="body-container">
+                            <h1>Profile</h1>
 
-                        <div className="planning-board">
-                            <h2>Todos</h2>
-                            <ul>
-                                {listTodos}
-                            </ul>
+                            <div className="planning-board">
+                                <h2 className="list-header">Todos</h2>
+                                <ul className="list-container todo-container">
+                                    {listTodos}
+                                </ul>
 
-                            <h2>Completed</h2>
-                            <ul>
-                                {listCompletedTodos}
-                            </ul>
+                                <h2 className="list-header">Completed</h2>
+                                <ul className="list-container completed-container">
+                                    {listCompletedTodos}
+                                </ul>
 
-                            <h2>Wishlist</h2>
-                            <ul>
-                                {listWishlist}
-                            </ul>
+                                <h2 className="list-header">Wishlist</h2>
+                                <ul className="list-container wishlist-container">
+                                    {listWishlist}
+                                </ul>
+                            </div>
+
+                            <div className="logout">
+                                <Link to="/">
+                                    <button className="" onClick={() => {signOut(auth)}}>Logout</button>
+                                </Link>
+                            </div>
+
+                            {/* JS Lab experiments */}
+                            <div className="lab-container">
+
+                            </div>
                         </div>
-
-                        <div className="logout">
-                            <Link to="/">
-                                <button className="" onClick={() => {signOut(auth)}}>Logout</button>
-                            </Link>
-                        </div>
-
-                        <Link className="" to="/projects/add">
-                            Add Project
-                        </Link>
-
-                        {/* JS Lab experiments */}
-                        <div className="lab-container">
-
-                        </div>
-
                     </div>
                     <Footer />
                 </div>
@@ -123,7 +122,7 @@ const Item = (props) => {
     let text = props.text
 
     return (
-        <li>{text}</li>
+        <li className="list-item">{text}</li>
     )
 }
 
