@@ -11,8 +11,7 @@ import "./css/records.css"
 // components
 import Navbar from "../nav/Navbar"
 import Footer from "../nav/Footer"
-import { db } from "../firebase/firebaseConfig"
-import { auth } from "../firebase/firebaseConfig"
+import { db, auth } from "../firebase/firebaseConfig"
 
 
 const AddRecord = () => {

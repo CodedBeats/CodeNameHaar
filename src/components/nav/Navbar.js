@@ -21,12 +21,13 @@ const Navbar = () => {
 
             <ul>
                 <CustomLink to="/projects">Projects</CustomLink>
-                <CustomLink to="/records">Records</CustomLink>
+                <CustomLink to="/tech-talk">Tech Talk</CustomLink>
 
                 {/* if logged in -> logout, else login */}
                 {
-                user ? (
+                    user ? (
                     <>
+                    <CustomLink to="/records">Records</CustomLink>
                     <CustomLink to="/profile">Profile</CustomLink>
                     </>
                 ):(

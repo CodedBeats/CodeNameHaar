@@ -42,6 +42,7 @@ const Profile = () => {
         {key: 8, value: "[X] create not found page for no page and missing permissions"},
         {key: 9, value: "[X] change records to small boxes with just name and click takes to better viewing page"},
         {key: 10, value: "[X] move delete button to individual post and onlly allow if logged in"},
+        {key: 11, value: "[X] add a Tech Talk page for blog posts about cool tech stuff I've found"},
     ]
     const wishlist = [
         {key: 1, value: "eyeballs on image that follow cursor"},
