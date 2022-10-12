@@ -14,6 +14,7 @@ import NotFound from "./components/misc/NotFound"
 import Records from "./components/records/Records"
 import Record from "./components/records/Record"
 import AddRecord from "./components/records/AddRecord"
+import EditRecord from "./components/records/EditRecord"
 import Projects from "./components/projects/Projects"
 import AddProject from "./components/projects/AddProject"
 import TechTalkPosts from "./components/tech-talk/TechTalkPosts"
@@ -43,8 +44,9 @@ const App = () => {
 
                 {/* records */}
                 <Route path="/records" element={<Records />} />
-                <Route path="/record/:id" element={<Record />} />
                 <Route path="/records/add" element={<AddRecord />} />
+                <Route path="/records/:id" element={<Record />} />
+                <Route path="/records/edit/:id" element={<EditRecord />} />
 
                 {/* not found */}
                 <Route path="*" element={<NotFound notFound={true} wrongPermissions={false} />} />

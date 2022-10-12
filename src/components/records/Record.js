@@ -1,6 +1,6 @@
 // dependencies
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import { doc, onSnapshot } from "firebase/firestore"
 
 // style
@@ -20,6 +20,7 @@ const Record = () => {
 
     useEffect(() => {
         const docRef = doc(db, "records", id)
+        // console.log(docRef)
         onSnapshot(docRef, (snapshot) => {
             setRecord({...snapshot.data(), id: snapshot.id})
         })
@@ -78,6 +79,8 @@ const Record = () => {
                                 <p className="field-value">{record.createdAt.toDate().toDateString()}</p>
                             </div>
                             <DeleteRecord id={record.id} />
+
+                            <Link to={`/records/edit/${id}`}>Edit</Link>
                         </div>
                     } 
                 </div>

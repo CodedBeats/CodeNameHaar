@@ -55,7 +55,7 @@ const Records = () => {
                         records.map(({id, name, info}) => 
                             <div key={id} className="record-container" >
                                 <div className="record-field">
-                                    <Link to={`/record/${id}`}>
+                                    <Link to={`/records/${id}`}>
                                         <p className="field-name">{name}</p>
                                     </Link>
                                 </div>
