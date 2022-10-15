@@ -93,6 +93,7 @@
 
 .nav-logo {
     font-size: 2rem !important;
+    font-family: PressStart2P;
 }
 .nav-logo:hover {
     animation: colorAnimation 8s linear infinite;
@@ -116,6 +117,7 @@
     padding: 0 .5rem 0;
     font-weight: bold;
     font-size: 1rem;
+    font-family: Coda;
 }
 
 .navbar li.active {

@@ -2,3 +2,21 @@ body {
   margin: 0;
 }
 
+@font-face {
+  font-family: "Coda";
+  src: local("Coda"),
+    url("./fonts/Coda-Regular.ttf") 
+    format("truetype");
+}
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans"),
+    url("./fonts/OpenSans-VariableFont_wdth,wght.ttf") 
+    format("truetype");
+}
+@font-face {
+  font-family: "PressStart2P";
+  src: local("PressStart2P"),
+    url("./fonts/PressStart2P-Regular.ttf") 
+    format("truetype");
+}

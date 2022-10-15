@@ -21,8 +21,9 @@ const Profile = () => {
     // set todos and completed
     const todos = [
         {key: 1, value: "seperate profiles based on user"},
-        {key: 2, value: "add edit record functionality"},
-        {key: 3, value: "add fonts"},
+        {key: 2, value: "add record text to edit record form"},
+        {key: 3, value: "fix multiple fonts"},
+        // https://dev.to/annequinkenstein/adding-fonts-to-create-react-app-3ed7
         {key: 4, value: "structure project for consistent indentation"},
         {key: 5, value: "structure projects to have the same display as records (projects with smaller boxes, project will full view)"},
         {key: 6, value: "style single record item"},
@@ -32,6 +33,7 @@ const Profile = () => {
         {key: 10, value: "start working on JS lab"},
         {key: 11, value: "move hexagons to js lab and make landing page show most recent [project, tech talk] and a short about me"},
         {key: 12, value: "change footer so it links to website and figure out email link"},
+        {key: 13, value: "change these lists to be stored in firebase"},
     ]
     const completedTodos = [
         {key: 1, value: "add styling to records and add record form"},
@@ -46,6 +48,7 @@ const Profile = () => {
         {key: 10, value: "move delete button to individual post and onlly allow if logged in"},
         {key: 11, value: "add a Tech Talk page for blog posts about cool tech stuff I've found"},
         {key: 12, value: "style records"},
+        {key: 13, value: "add edit record functionality"},
     ]
     const wishlist = [
         {key: 1, value: "eyeballs on image that follow cursor"},

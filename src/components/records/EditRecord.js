@@ -1,6 +1,5 @@
 /* 
 https://softauthor.com/firebase-firestore-update-document-data-updatedoc/
-https://travis.media/how-to-use-firebase-with-react/#20211130-updateDoc
 */
 
 // dependencies
