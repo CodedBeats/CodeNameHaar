@@ -33,8 +33,10 @@ const EditRecord = () => {
     useEffect(() => {
         onSnapshot(docRef, (snapshot) => {
             setRecord({...snapshot.data(), id: snapshot.id})
+            // console.log({...snapshot.data()})
+            setFormData(snapshot => ({...snapshot, age: snapshot.age}))
         })
-    })
+    }, [id])
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });

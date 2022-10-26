@@ -23,8 +23,9 @@ const Record = () => {
         // console.log(docRef)
         onSnapshot(docRef, (snapshot) => {
             setRecord({...snapshot.data(), id: snapshot.id})
+            // console.log({...snapshot.data()})
         })
-    })
+    }, [id])
 
     return ( 
         <div className="container">
