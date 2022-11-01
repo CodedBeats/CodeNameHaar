@@ -4,7 +4,7 @@ import { deleteDoc, doc } from "firebase/firestore"
 import { toast } from "react-toastify"
 
 // style
-import "./css/tech-talk.css"
+import "../misc/css/buttons.css"
 
 // components
 import { db } from "../firebase/firebaseConfig"
@@ -27,7 +27,7 @@ const DeleteTechTalkPost = (props) => {
     }
     
     return ( 
-        <div className="delete-container">
+        <div className="gradiant-button-container">
             <Link to="/tech-talk">
                 <button className="gradiant-button" onClick={handleDelete}>Delete</button>
             </Link>

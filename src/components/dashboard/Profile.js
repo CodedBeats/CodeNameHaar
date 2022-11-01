@@ -97,7 +97,7 @@ const Profile = () => {
                                 </ul>
                             </div>
 
-                            <div className="logout">
+                            <div className="logout-button">
                                 <Link to="/">
                                     <button className="" onClick={() => {signOut(auth)}}>Logout</button>
                                 </Link>
@@ -106,7 +106,7 @@ const Profile = () => {
                             {/* JS Lab experiments */}
                             <div className="lab-container">
                                 <Link to="/labratory">
-                                    Lab
+                                    <button className="">Labratory</button>
                                 </Link>
                             </div>
                         </div>

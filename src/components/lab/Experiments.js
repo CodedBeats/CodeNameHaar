@@ -16,6 +16,9 @@ import Footer from "../nav/Footer"
 import NotFound from "../misc/NotFound"
 import { auth } from "../firebase/firebaseConfig"
 
+// stuff
+// https://getcssscan.com/css-buttons-examples
+
 const Experiments = () => {
 
     // firebase user auth
@@ -31,8 +34,26 @@ const Experiments = () => {
                     <Navbar />
                     <div className="page-container">
                         <div className="body-container">
-                            <OrbitParticles cursorPosition={cursorPosition} onCursorPositionChanged={setCursorPosition} />
-                            <StationaryAnimations />
+                            <div className="canvasy-container">
+                                <OrbitParticles cursorPosition={cursorPosition} onCursorPositionChanged={setCursorPosition} />
+                                <StationaryAnimations />
+                            </div>
+                            <div className="buttons-container">
+                                <div className="hover-button-container btn">
+                                    <div className="hover-button">
+                                        <div className="hover-button-text">Button 1</div>
+                                    </div>
+                                </div>
+                                <button className="button-2 btn">
+                                    <span className="button-2-text">Button 2</span>
+                                </button>
+                                <button className="button-3 btn">
+                                    Button 3
+                                </button>
+                                <button className="button-4 btn">
+                                    Button 4
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <Footer />
@@ -46,7 +67,5 @@ const Experiments = () => {
     );
         
 }
-
-// render mini individual experiments, pass id={id} as parameter
 
 export default Experiments;
