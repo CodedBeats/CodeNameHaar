@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes , Route } from "react-router-dom"
 import Dashboard from "./components/dashboard/Dashboard"
 import Login from "./components/auth/Login"
 import Profile from "./components/dashboard/Profile"
-import Experiments from "./components/lab/Experiments"
+import Labratory from "./components/lab/Labratory"
 import NotFound from "./components/misc/NotFound"
 
 // misc
@@ -36,7 +36,7 @@ const App = () => {
                 <Route path="/profile" element={<Profile />} />
 
                 {/* JS Experiments */}
-                <Route path="/labratory" element={<Experiments />} />
+                <Route path="/labratory" element={<Labratory />} />
 
                 {/* blog */}
                 <Route path="/tech-talk" element={<TechTalkPosts />} />
