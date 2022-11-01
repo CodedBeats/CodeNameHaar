@@ -30,7 +30,6 @@ const Profile = () => {
         {key: 7, value: "style projects"},
         {key: 8, value: "style not found page"},
         {key: 9, value: "style profile page"},
-        {key: 10, value: "start working on JS lab"},
         {key: 11, value: "move hexagons to js lab and make landing page show most recent [project, tech talk] and a short about me"},
         {key: 12, value: "change footer so it links to website and figure out email link"},
         {key: 13, value: "change these lists to be stored in firebase"},
@@ -49,6 +48,7 @@ const Profile = () => {
         {key: 11, value: "add a Tech Talk page for blog posts about cool tech stuff I've found"},
         {key: 12, value: "style records"},
         {key: 13, value: "add edit record functionality"},
+        {key: 14, value: "JS lap fun"},
     ]
     const wishlist = [
         {key: 1, value: "eyeballs on image that follow cursor"},
@@ -105,7 +105,9 @@ const Profile = () => {
 
                             {/* JS Lab experiments */}
                             <div className="lab-container">
-
+                                <Link to="/labratory">
+                                    Lab
+                                </Link>
                             </div>
                         </div>
                     </div>
