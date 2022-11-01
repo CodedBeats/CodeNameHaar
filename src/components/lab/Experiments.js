@@ -5,6 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth"
 
 // style
 import "../misc/css/page-container.css"
+import "./css/experiments.css"
 
 // Experiments
 import OrbitParticles from "./OrbitParticles.js"
@@ -53,6 +54,16 @@ const Experiments = () => {
                                 <button className="button-4 btn">
                                     Button 4
                                 </button>
+                            </div>
+                            <div className="to-try-container">
+                                <ul>
+                                    <li>
+                                        <a href="https://p5js.org/" target="_blank" rel="noreferrer">P5 JS</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://sonic-pi.net/" target="_blank" rel="noreferrer">Sonic Pi</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>

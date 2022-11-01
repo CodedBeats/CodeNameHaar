@@ -1,0 +1,16 @@
+.to-try-container {
+    margin-top: 20px;
+}
+
+.to-try-container ul li {
+    list-style: none;
+}
+
+.to-try-container ul li a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: black;
+}
+.to-try-container ul li a:hover {
+    color: rgb(218, 0, 0);
+}
