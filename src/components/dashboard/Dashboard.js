@@ -18,15 +18,16 @@ const Dashboard = () => {
             <Navbar />
             
             <div className="page-container">
-
                 <Hexagons />
-
                 <div className="body-container">
-                    
+                    <div className="synopsis-container">
+                        <div className="synopsis-title">
+                            Luca Haar
+                        </div>
 
+                    </div>
                 </div>
             </div>
-
             <Footer />
         </div>
     );
