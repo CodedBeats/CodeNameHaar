@@ -6,6 +6,8 @@ import "../misc/css/page-container.css"
 import "./css/experiments.css"
 
 // Experiments
+import Hexagons from "./Hexagons"
+import { Cursor1 } from "./Cursors"
 
 // components + variables
 import Navbar from "../nav/Navbar"
@@ -28,9 +30,14 @@ const Experiments = () => {
                 <div className="container">
                     <Navbar />
                     <div className="page-container">
+                        <div className="backgrounds">
+                            <Hexagons />
+                        </div>
                         <div className="body-container">
-                            <div className="canvasy-container">
+                            <div className="cursors">
+                                <Cursor1 />
                             </div>
+
                             <div className="buttons-container">
                                 <div className="hover-button-container btn">
                                     <div className="hover-button">
@@ -47,6 +54,7 @@ const Experiments = () => {
                                     Button 4
                                 </button>
                             </div>
+
                             <div className="to-try-container">
                                 <ul>
                                     <li>

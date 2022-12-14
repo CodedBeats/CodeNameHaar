@@ -1,5 +1,5 @@
 // styles
-import "./css/backgrounds.css"
+import "./css/hexagons.css"
 
 // dependencies
 
