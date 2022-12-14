@@ -7,6 +7,7 @@ const Modal = (props) => {
     // define what props will be used for
     let titleText = props.title
     let bodyText = props.body
+    let link = props.link
     let onClose = props.onClose
 
     return ( 
@@ -17,7 +18,7 @@ const Modal = (props) => {
                     <h2>{titleText}</h2>
                 </div>
                 <div className="modal-body">
-                    <p>{bodyText}</p>
+                    <a href={link}>{bodyText}</a>
                 </div>
             </div>
         </div>
