@@ -3,6 +3,7 @@ body {
 }
 
 .hex-container {
+    z-index: 0;
     position: relative;
     overflow: hidden;
     animation: animate 4s linear infinite;
