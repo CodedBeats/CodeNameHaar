@@ -63,6 +63,9 @@ const Experiments = () => {
                                     <li>
                                         <a href="https://sonic-pi.net/" target="_blank" rel="noreferrer">Sonic Pi</a>
                                     </li>
+                                    <li>
+                                        <a href="https://codepen.io/jackrugile/pen/DdYrrV" target="_blank" rel="noreferrer">Codepen Particles</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
