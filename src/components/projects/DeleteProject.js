@@ -4,6 +4,7 @@ import { deleteObject, ref } from "firebase/storage"
 import { toast } from "react-toastify"
 
 // style
+import "../misc/css/buttons.css"
 
 // components
 import { db, storage } from "../firebase/firebaseConfig"
@@ -31,7 +32,7 @@ const DeleteProject = (props) => {
     
     return ( 
         <div>
-            <button className="delete-project-button" onClick={handleDelete}>Delete</button>
+            <button className="gradiant-button" onClick={handleDelete}>Delete</button>
         </div>
     );
 }
