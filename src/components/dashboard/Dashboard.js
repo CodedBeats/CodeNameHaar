@@ -12,7 +12,8 @@ import Footer from "../nav/Footer"
 
 const Dashboard = () => {
 
-    const [title, setTitle] = useState("<")
+    const [possition, setPossition] = useState("0%")
+    const [width, setWidth] = useState("500px")
     
     return ( 
         <div className="dashboard container">
@@ -21,10 +22,29 @@ const Dashboard = () => {
             <div className="page-container">
                 <div className="body-container">
                     <div className="synopsis-container">
-                        {/* <div className="synopsis-title" onMouseOver={() => setTitle("<CodedBeats")}> */}
+                        <div className="synopsis-title" 
+                            onMouseEnter={() => {setPossition("57%"); setWidth("80px")}}
+                            onMouseLeave={() => {setPossition("0%"); setWidth("500px")}}
+                        >
                             {/* {title}  */}
-                        <div className="synopsis-title">
-                            &lt;CodedBeats /&gt;
+                        {/* <div className="synopsis-title"> */}
+                            <p className="left">
+                                &lt;
+                            </p>
+                            <p className="middle"
+                                style={{
+                                    width: possition
+                                }}
+                            >
+                                CodedBeats&nbsp;
+                            </p>
+                            <p className="right"
+                                style={{
+                                    width: width
+                                }}>
+                                /&gt;
+                            </p>
+                            
                         </div>
                         <div className="synopsis-content">
                             Hi there, I'm Luca Haar. <br />

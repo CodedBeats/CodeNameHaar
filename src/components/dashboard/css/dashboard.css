@@ -7,22 +7,33 @@
     background-color: rgb(255, 255, 255);
     border: solid 1px black;
     border-radius: 10px;
+    overflow: hidden;
 } 
 
 .synopsis-title {
-    width: 100px;
-    overflow: hidden;
-    transition: 1s;
-
-    margin: 0 auto;
+    align-content: center;
     font-family: Coda;
     font-size: 6em;
     text-align: center;
     font-weight: bold;
     color: rgb(0, 0, 0);
+    overflow: hidden;
 }
-.synopsis-title:hover {
-    width: 100%;
+.left {
+    transition: 1s;
+    display: inline-block;
+}
+.middle {
+    transition: 1s;
+    display: inline-block;
+}
+.right {
+    position: absolute;
+    z-index: 1;
+    transition: 1s;
+    text-align: left;
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
 }
 .synopsis-content {
     line-height: 130%;
