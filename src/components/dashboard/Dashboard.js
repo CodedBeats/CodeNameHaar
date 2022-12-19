@@ -13,7 +13,7 @@ import Footer from "../nav/Footer"
 const Dashboard = () => {
 
     const [possition, setPossition] = useState("0%")
-    const [width, setWidth] = useState("500px")
+    const [backgroundWidth, setBackgroundWidth] = useState("500px")
     
     return ( 
         <div className="dashboard container">
@@ -23,8 +23,8 @@ const Dashboard = () => {
                 <div className="body-container">
                     <div className="synopsis-container">
                         <div className="synopsis-title" 
-                            onMouseEnter={() => {setPossition("57%"); setWidth("80px")}}
-                            onMouseLeave={() => {setPossition("0%"); setWidth("500px")}}
+                            onMouseEnter={() => {setPossition("57%"); setBackgroundWidth("80px")}}
+                            onMouseLeave={() => {setPossition("0%"); setBackgroundWidth("500px")}}
                         >
                             {/* {title}  */}
                         {/* <div className="synopsis-title"> */}
@@ -40,7 +40,7 @@ const Dashboard = () => {
                             </p>
                             <p className="right"
                                 style={{
-                                    width: width
+                                    width: backgroundWidth
                                 }}>
                                 /&gt;
                             </p>
