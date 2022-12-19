@@ -6,18 +6,19 @@ import Dashboard from "./components/dashboard/Dashboard"
 import Login from "./components/auth/Login"
 import Profile from "./components/dashboard/Profile"
 import Labratory from "./components/lab/Labratory"
-import NotFound from "./components/misc/NotFound"
 
 // misc
-// import NotFound from "./components/misc/NotFound"
+import NotFound from "./components/misc/NotFound"
 
 // CRUD pages
 import Records from "./components/records/Records"
 import Record from "./components/records/Record"
 import AddRecord from "./components/records/AddRecord"
 import EditRecord from "./components/records/EditRecord"
+
 import Projects from "./components/projects/Projects"
 import AddProject from "./components/projects/AddProject"
+
 import TechTalkPosts from "./components/tech-talk/TechTalkPosts"
 import AddTechTalkPost from "./components/tech-talk/AddTechTalkPost"
 
