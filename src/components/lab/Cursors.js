@@ -1,9 +1,9 @@
 // styles
 import "./css/cursors.css"
 
-// dependencies
 
-// == This can be improved with props and onMouseMove as func rather than global and always activating on this page == //
+// == this can be changed to something like this (for the react way and more efficient) ==
+// <Cursor1 onMouseEnter={enableCursor} onMouseLeave={disableCursor} onMouseMove={moveCursor} />
 export const Cursor1 = () => {
     // set initial coords
     const coords = { x: 0, y: 0 };
