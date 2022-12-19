@@ -14,7 +14,7 @@ body {
     position: relative;
     width: 100px;
     height: 110px;
-    background: black;
+    background: rgb(22, 22, 22);
     margin: 1px;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     transition: 2s;

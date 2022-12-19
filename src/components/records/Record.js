@@ -5,6 +5,7 @@ import { doc, onSnapshot } from "firebase/firestore"
 
 // style
 import "../misc/css/page-container.css"
+import "../misc/css/buttons.css"
 // import "./css/record.css"
 
 // components/variables
@@ -81,7 +82,7 @@ const Record = () => {
                             </div>
                             <DeleteRecord id={record.id} />
 
-                            <Link to={`/records/edit/${id}`}>Edit</Link>
+                            <Link to={`/records/edit/${id}`} className="add-item">Edit</Link>
                         </div>
                     } 
                 </div>

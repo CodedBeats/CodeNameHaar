@@ -7,6 +7,7 @@ import { toast } from "react-toastify"
 
 // style
 import "../misc/css/page-container.css"
+import "../misc/css/buttons.css"
 
 // components
 import Navbar from "../nav/Navbar"
@@ -34,7 +35,6 @@ const AddProject = () => {
     const handleImageChange = (e) => {
         setFormData({ ...formData, image: e.target.files[0] })
     }
-
 
     const handleSubmit = () => {
         // check to see if any field hasn't been filled
@@ -98,7 +98,7 @@ const AddProject = () => {
                         <h2>Add A Project</h2>
 
                         {/* title */}
-                        <label htmlFor="">Title</label>
+                        <label htmlFor="" className="project-fields">Title</label>
                         <input 
                             type="text" 
                             name="title" 
@@ -107,7 +107,7 @@ const AddProject = () => {
                         />
 
                         {/* text content */}
-                        <label htmlFor="">Content</label>
+                        <label htmlFor="" className="project-fields">Content</label>
                         <textarea 
                             name="content" 
                             value={formData.content}
@@ -115,7 +115,7 @@ const AddProject = () => {
                         />
 
                         {/* image  */}
-                        <label htmlFor="">Image</label>
+                        <label htmlFor="" className="project-fields">Image</label>
                         <input 
                             type="file" 
                             name="image" 
@@ -132,7 +132,7 @@ const AddProject = () => {
                         </div>
                         )}
                         {/* publish project button */}
-                        <button className="" onClick={handleSubmit}>Publish</button>
+                        <button className="add-item" onClick={handleSubmit}>Publish</button>
                     
                     </div>
                 </div>

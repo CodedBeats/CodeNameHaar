@@ -6,6 +6,7 @@ import { useAuthState } from "react-firebase-hooks/auth"
 
 // style
 import "../misc/css/page-container.css"
+import "../misc/css/buttons.css"
 import "./css/projects.css"
 
 // components/variables
@@ -41,7 +42,7 @@ const Projects = () => {
             <div className="page-container">
                 <div className="body-container">
                     <h2>Projects</h2>
-                    {user && <Link to="/projects/add">Add Project</Link>}
+                    {user && <Link to="/projects/add" className="add-item">Add Project</Link>}
 
                     <div className="projects">
                         {

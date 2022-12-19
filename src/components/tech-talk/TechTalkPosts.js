@@ -5,7 +5,9 @@ import { collection, query, orderBy, onSnapshot } from "firebase/firestore"
 import { useAuthState } from "react-firebase-hooks/auth"
 
 // style
+import "./css/tech-talk.css"
 import "../misc/css/page-container.css"
+import "../misc/css/buttons.css"
 
 // components/variables
 import Navbar from "../nav/Navbar"
@@ -41,12 +43,12 @@ const TechTalkPosts = () => {
             <div className="page-container">
                 <div className="body-container">
                     <h2>Tech Talk</h2>
-                    {user && <Link to="/tech-talk/add">Add Post</Link>}
+                    {user && <Link to="/tech-talk/add" className="add-item">Add Post</Link>}
 
                     <div className="tech-talk-posts">
                         {
                         posts.map(({id, title, description}) => 
-                            <div key={id} className="post-container" >
+                            <div key={id} className="post-container">
                                 <div className="post-field">
                                     <p className="field-title">{title}</p>
                                 </div>

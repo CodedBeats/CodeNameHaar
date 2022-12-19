@@ -7,6 +7,7 @@ import { toast } from "react-toastify"
 
 // style
 import "../misc/css/page-container.css"
+import "../misc/css/buttons.css"
 import "./css/login.css"
 
 // components
@@ -41,7 +42,7 @@ const Login = () => {
                     <div className="login-container">
                         <h2>Login</h2>
 
-                        <label>Email</label>
+                        <label className="login-label">Email</label>
                         <input 
                             type="email"
                             className=""
@@ -51,7 +52,7 @@ const Login = () => {
                             }}
                         />
 
-                        <label>Password</label>
+                        <label className="login-label">Password</label>
                         <input 
                             type="password"
                             className=""
@@ -61,7 +62,7 @@ const Login = () => {
                             }}
                         />
 
-                        <div className="">
+                        <div className="add-item">
                             <button onClick={handleLogin}>Login</button>
                         </div>
 

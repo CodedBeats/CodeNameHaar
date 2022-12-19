@@ -6,6 +6,7 @@ import { signOut } from "firebase/auth"
 // style
 import "./css/profile.css"
 import ".././misc/css/page-container.css"
+import "../misc/css/buttons.css"
 
 // components + variables
 import Navbar from "../nav/Navbar"
@@ -99,14 +100,14 @@ const Profile = () => {
 
                             <div className="logout-button">
                                 <Link to="/">
-                                    <button className="" onClick={() => {signOut(auth)}}>Logout</button>
+                                    <button className="add-item" onClick={() => {signOut(auth)}}>Logout</button>
                                 </Link>
                             </div>
 
                             {/* JS Lab experiments */}
-                            <div className="lab-container">
+                            <div className="lab-button">
                                 <Link to="/labratory">
-                                    <button className="">Labratory</button>
+                                    <button className="add-item">Labratory</button>
                                 </Link>
                             </div>
                         </div>
