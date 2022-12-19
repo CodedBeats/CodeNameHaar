@@ -1,17 +1,32 @@
 .synopsis-container {
     z-index: 1;
     width: 50%;
-    position: fixed;
+    position: absolute;
     top: 30%;
     left: 25%;
-    background-color: rgb(155, 155, 155);
+    background-color: rgb(255, 255, 255);
     border: solid 1px black;
     border-radius: 10px;
 } 
 
 .synopsis-title {
+    width: 100px;
+    overflow: hidden;
+    transition: 1s;
+
     margin: 0 auto;
-    font-size: 5em;
+    font-family: Coda;
+    font-size: 6em;
     text-align: center;
-    color: white;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.synopsis-title:hover {
+    width: 100%;
+}
+.synopsis-content {
+    line-height: 130%;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.7em;
+    padding: 10px;
 }
