@@ -17,7 +17,11 @@
 .wishlist-container {
     background-color: #c803cf9a;
 }
+.urgent-container {
+    background-color: rgb(207, 8, 141);
+}
 .list-item {
+    font-size: 1.1em;
     padding: 5px 10px;
     border: 1px solid #ffffff;
 }

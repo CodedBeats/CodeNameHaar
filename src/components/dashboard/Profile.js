@@ -61,6 +61,11 @@ const Profile = () => {
         {key: 7, value: "relations to people where records can be searched for their similarities"},
         {key: 8, value: "lazy loading on more full pages"},
     ]
+    const urgent = [
+        {key: 1, value: "dashboard title at different screen widths"},
+        {key: 2, value: "projects at different screen widths"},
+        // {key: 3, value: "scroll to top button"},
+    ]
     let listTodos = todos.map(({key, value}) => 
         <Item key={key} text={value} />
     )
@@ -68,6 +73,9 @@ const Profile = () => {
         <Item key={key} text={value} />
     )
     let listWishlist = wishlist.map(({key, value}) => 
+        <Item key={key} text={value} />
+    )
+    let listUrgent = urgent.map(({key, value}) => 
         <Item key={key} text={value} />
     )
     
@@ -95,6 +103,11 @@ const Profile = () => {
                                 <h2 className="list-header">Wishlist</h2>
                                 <ul className="list-container wishlist-container">
                                     {listWishlist}
+                                </ul>
+
+                                <h2 className="list-header">Urgent</h2>
+                                <ul className="list-container urgent-container">
+                                    {listUrgent}
                                 </ul>
                             </div>
 
