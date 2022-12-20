@@ -23,17 +23,17 @@ const Dashboard = () => {
                 <div className="body-container">
                     <div className="synopsis-container">
                         <div className="synopsis-title" 
-                            onMouseEnter={() => {setPossition("57%"); setBackgroundWidth("80px")}}
+                            onMouseEnter={() => {setPossition("57%"); setBackgroundWidth("80px")}} 
                             onMouseLeave={() => {setPossition("0%"); setBackgroundWidth("500px")}}
                         >
-                            {/* {title}  */}
-                        {/* <div className="synopsis-title"> */}
+                            {/* this should be temporary */}
+                            <p className="mobile-title">&lt;CodedBeats /&gt;</p>
                             <p className="left">
                                 &lt;
                             </p>
                             <p className="middle"
                                 style={{
-                                    width: possition
+                                    width: possition,
                                 }}
                             >
                                 CodedBeats&nbsp;
@@ -47,8 +47,9 @@ const Dashboard = () => {
                             
                         </div>
                         <div className="synopsis-content">
-                            Hi there, I'm Luca Haar. <br />
-                            Im a Website Develper working in Melbourne Australia.
+                            Hi there, My name is Luca Haar. <br />
+                            I'm a freelance website developer working in Melbourne, Australia. <br /><br />
+                            This website is a protfolio of my projects and any cool discoveries I find while I develop my skills as a programmer.
                         </div>
 
                     </div>

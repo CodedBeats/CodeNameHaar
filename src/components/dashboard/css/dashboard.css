@@ -18,6 +18,12 @@
     color: rgb(255, 255, 255);
     overflow: hidden;
 }
+p {
+    margin: 30px 0px;
+}
+.mobile-title {
+    display: none;
+}
 .left {
     transition: 1s;
     display: inline-block;
@@ -35,9 +41,31 @@
     background-color: rgb(0, 0, 0);
 }
 .synopsis-content {
-    line-height: 130%;
     font-family:'Times New Roman', Times, serif;
     font-size: 1.7em;
     padding: 10px;
     color: white
+}
+
+@media (max-width: 700px) {
+    .synopsis-container {
+    position: absolute;
+    top: 30%;
+    left: 27%;
+    }
+    .mobile-title {
+        display: block;
+    }
+    .synopsis-title {
+        font-size: 3em;
+    }
+    .left {
+        display: none;
+    }
+    .middle {
+        display: none;
+    }
+    .right {
+        display: none;
+    }
 }
