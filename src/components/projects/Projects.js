@@ -60,7 +60,7 @@ const Projects = () => {
                                         <h3>{title}</h3>
                                         <p>{content}</p>
                                         <p>{createdAt.toDate().toDateString()}</p>
-                                        <DeleteProject id={id} imageUrl={imageUrl} />
+                                        {user && <DeleteProject id={id} imageUrl={imageUrl} />}
                                     </div>
                                 </div> 
                             )

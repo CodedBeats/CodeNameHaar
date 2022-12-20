@@ -8,6 +8,7 @@ import { toast } from "react-toastify"
 // style
 import "../misc/css/page-container.css"
 import "../misc/css/buttons.css"
+import "./css/projects.css"
 
 // components
 import Navbar from "../nav/Navbar"
