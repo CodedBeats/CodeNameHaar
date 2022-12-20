@@ -49,7 +49,7 @@ const Profile = () => {
         {key: 11, value: "add a Tech Talk page for blog posts about cool tech stuff I've found"},
         {key: 12, value: "style records"},
         {key: 13, value: "add edit record functionality"},
-        {key: 14, value: "JS lap fun"},
+        {key: 14, value: "JS lab fun"},
     ]
     const wishlist = [
         {key: 1, value: "eyeballs on image that follow cursor"},
@@ -64,7 +64,10 @@ const Profile = () => {
     const urgent = [
         {key: 1, value: "dashboard title at different screen widths"},
         {key: 2, value: "projects at different screen widths"},
-        // {key: 3, value: "scroll to top button"},
+        {key: 3, value: "adjust px to % values"},
+        {key: 4, value: "wrap images in relative div of % to get aspect ration and then position absolute with 100% width and height"},
+        {key: 5, value: "set image container max-width to 200px mobile view"},
+        {key: 6, value: "change max-width to 600px"},
     ]
     let listTodos = todos.map(({key, value}) => 
         <Item key={key} text={value} />
