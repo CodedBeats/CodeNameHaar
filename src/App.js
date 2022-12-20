@@ -30,7 +30,7 @@ const App = () => {
         <Router>
             <Routes>
                 {/* landing */}
-                <Route path="/" element={<Dashboard />} />
+                <Route path="/CodeNameHaar" element={<Dashboard />} />
 
                 {/* auth and profile */}
                 <Route path="/login" element={<Login />} />

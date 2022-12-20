@@ -99,7 +99,7 @@ const Profile = () => {
                             </div>
 
                             <div className="logout-button">
-                                <Link to="/">
+                                <Link to="/CodeNameHaar">
                                     <button className="add-item" onClick={() => {signOut(auth)}}>Logout</button>
                                 </Link>
                             </div>
