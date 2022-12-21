@@ -16,7 +16,7 @@
     background-color: rgb(230, 230, 230);
 }
 .project-image {
-    max-width: 600px;
+    max-width: 500px;
 }
 
 .project-fields {
@@ -30,5 +30,8 @@
 @media (max-width: 700px) {
     .projects {
         flex-direction: column;
+    }
+    .project-image {
+        max-width: 100%;
     }
 }
