@@ -63,9 +63,8 @@ const Profile = () => {
     ]
     const urgent = [
         {key: 1, value: "dashboard title at different screen widths"},
-        {key: 2, value: "projects at different screen widths"},
-        {key: 3, value: "adjust px to % values"},
-        {key: 4, value: "wrap images in relative div of % to get aspect ration and then position absolute with 100% width and height"},
+        {key: 3, value: "adjust px to vh% / vw% values"},
+        {key: 4, value: "wrap child divs in relative div of % to get aspect ration and then position absolute with 100% width and height"},
         {key: 5, value: "set image container max-width to 200px mobile view"},
         {key: 6, value: "change max-width to 600px"},
     ]
