@@ -31,6 +31,7 @@ const App = () => {
             <Routes>
                 {/* landing */}
                 <Route path="/CodeNameHaar" element={<Dashboard />} />
+                <Route path="/" element={<Dashboard />} />
 
                 {/* auth and profile */}
                 <Route path="/login" element={<Login />} />
