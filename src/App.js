@@ -1,5 +1,6 @@
 // dependencies
 import { BrowserRouter as Router, Routes , Route } from "react-router-dom"
+import { Analytics } from '@vercel/analytics/react'
 
 // general
 import Dashboard from "./components/dashboard/Dashboard"
@@ -56,6 +57,9 @@ const App = () => {
 
                 {/* not found */}
                 <Route path="*" element={<NotFound notFound={true} wrongPermissions={false} />} />
+                
+                {/* analytics */}
+                <Analytics />
             </Routes>
         </Router>
     );
