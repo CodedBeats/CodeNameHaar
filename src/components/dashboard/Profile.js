@@ -90,6 +90,7 @@ const Profile = () => {
                     <div className="page-container">
                         <div className="body-container">
                             <h1>Profile</h1>
+                            <p style={{color: "white"}}>Vercel Working?</p>
 
                             <div className="planning-board">
                                 <h2 className="list-header">Todos</h2>
