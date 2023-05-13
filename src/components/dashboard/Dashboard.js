@@ -26,7 +26,7 @@ const Dashboard = () => {
                             onMouseEnter={() => {setPossition("57%"); setBackgroundWidth("80px")}} 
                             onMouseLeave={() => {setPossition("0%"); setBackgroundWidth("500px")}}
                         >
-                            {/* this should be temporary */}
+                            {/* needs a fix */}
                             <p className="mobile-title">&lt;CodedBeats /&gt;</p>
                             <p className="left">
                                 &lt;
@@ -49,7 +49,9 @@ const Dashboard = () => {
                         <div className="synopsis-content">
                             Hi there, My name is Luca Haar. <br />
                             I'm a freelance website developer working in Melbourne, Australia. <br /><br />
-                            This website is a protfolio of my projects and any cool discoveries I find while I develop my skills as a programmer.
+                            This website shows off my skils through past projects and gives you a taste of what I'm currently working on. <br /><br />
+                            {/* temp text */}
+                            It's also very much a Work in Progress
                         </div>
 
                     </div>

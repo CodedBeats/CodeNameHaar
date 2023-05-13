@@ -21,7 +21,7 @@ const Navbar = () => {
 
             <ul>
                 <CustomLink to="/projects">Projects</CustomLink>
-                <CustomLink to="/tech-talk">Tech Talk</CustomLink>
+                <CustomLink to="/">Active Endeavors</CustomLink>
 
                 {/* if logged in -> logout, else login */}
                 {

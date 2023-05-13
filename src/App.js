@@ -19,9 +19,6 @@ import EditRecord from "./components/records/EditRecord"
 import Projects from "./components/projects/Projects"
 import AddProject from "./components/projects/AddProject"
 
-import TechTalkPosts from "./components/tech-talk/TechTalkPosts"
-import AddTechTalkPost from "./components/tech-talk/AddTechTalkPost"
-
 
 
 const App = () => {
@@ -39,10 +36,6 @@ const App = () => {
 
                 {/* JS Experiments */}
                 <Route path="/labratory" element={<Labratory />} />
-
-                {/* blog */}
-                <Route path="/tech-talk" element={<TechTalkPosts />} />
-                <Route path="/tech-talk/add" element={<AddTechTalkPost />} />
 
                 {/* projects */}
                 <Route path="/projects" element={<Projects />} />
