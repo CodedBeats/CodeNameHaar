@@ -42,12 +42,12 @@
 }
 
 .navbar li.active {
-    background-color: rgb(100, 0, 0);
-    color: rgb(0, 161, 94);
+    background-color: rgb(219, 219, 219);
+    color: rgb(0, 0, 0);
 }
 .navbar li:hover {
     background-color: rgb(219, 219, 219);
-    color: rgb(0, 161, 94);
+    color: rgb(0, 0, 0);
 }
 
 .loged-in-container {
