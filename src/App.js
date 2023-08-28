@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes , Route } from "react-router-dom"
 import Dashboard from "./components/dashboard/Dashboard"
 import Login from "./components/auth/Login"
 import Profile from "./components/dashboard/Profile"
-import Labratory from "./components/lab/Labratory"
 
 // misc
 import NotFound from "./components/misc/NotFound"
@@ -33,9 +32,6 @@ const App = () => {
                 {/* auth and profile */}
                 <Route path="/login" element={<Login />} />
                 <Route path="/profile" element={<Profile />} />
-
-                {/* JS Experiments */}
-                <Route path="/labratory" element={<Labratory />} />
 
                 {/* projects */}
                 <Route path="/projects" element={<Projects />} />

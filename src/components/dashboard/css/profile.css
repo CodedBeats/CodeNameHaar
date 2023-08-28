@@ -1,34 +1,20 @@
-/* list */
-.list-header {
-    margin: 30px 0px 10px;
-    color: white;
+.to-try-container {
+    margin-top: 20px;
 }
-.list-container {
+
+.to-try-container ul li {
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
-.todo-container {
-    background-color: #e79600ad;
+
+.to-try-container ul li a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
 }
-.completed-container {
-    background-color: #39db239d;
-}
-.wishlist-container {
-    background-color: #c803cf9a;
-}
-.urgent-container {
-    background-color: rgb(207, 8, 141);
-}
-.list-item {
-    font-size: 1.1em;
-    padding: 5px 10px;
-    border: 1px solid #ffffff;
+.to-try-container ul li a:hover {
+    color: rgb(218, 0, 0);
 }
 
 .logout-button {
-    margin: 10px;
-}
-.lab-button {
     margin: 10px;
 }
