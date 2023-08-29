@@ -31,16 +31,17 @@ const EditRecord = () => {
 
     const docRef = doc(db, "records", id)
     useEffect(() => {
+        // Fetch the initial record data and populate the form
         onSnapshot(docRef, (snapshot) => {
-            setRecord({...snapshot.data(), id: snapshot.id})
-            // console.log({...snapshot.data()})
-            setFormData(snapshot => ({...snapshot, age: snapshot.age}))
-        })
-    }, [id])
+            const data = snapshot.data();
+            setRecord({ ...data, id: snapshot.id });
+            setFormData({ ...data });
+        });
+    }, [id]);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
-        console.log({ ...formData, [e.target.name]: e.target.value }, docRef)
+        // console.log({ ...formData, [e.target.name]: e.target.value }, docRef)
     };
 
     const handleUpdate = () => {
@@ -56,7 +57,6 @@ const EditRecord = () => {
 
     return (
         <>
-        {/* if logged in -> display page, else NotFound */}
         { user ? (  
             <div className="container">
                 <Navbar />
