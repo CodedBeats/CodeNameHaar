@@ -7,7 +7,7 @@ import { toast } from "react-toastify"
 
 // style
 import "../misc/css/page-container.css"
-import "./css/add-record.css"
+import "./css/edit-record.css"
 
 // components
 import Navbar from "../nav/Navbar"
@@ -17,9 +17,9 @@ import { db, auth } from "../firebase/firebaseConfig"
 const EditRecord = () => {
     const navigate = useNavigate();
 
-    const {id} = useParams()
-    const [user] = useAuthState(auth)
-    const [record, setRecord] = useState(null)
+    const {id} = useParams();
+    const [user] = useAuthState(auth);
+    const [record, setRecord] = useState(null);
     const [selectedField, setSelectedField] = useState("");
     const [fieldValue, setFieldValue] = useState("");
     
@@ -27,7 +27,7 @@ const EditRecord = () => {
     const [formData, setFormData] = useState({
         age: "",
         birthday: "",
-    })
+    });
 
     const docRef = doc(db, "records", id)
     useEffect(() => {
@@ -47,13 +47,13 @@ const EditRecord = () => {
     const handleUpdate = () => {
         updateDoc(docRef, formData)
         .then(() => {
-            toast("Record Updated Successfully", {type: "success"})
+            toast("Record Updated Successfully", {type: "success"});
 
             // Route to a different page after successful submission
             navigate("/records");
         })
         .catch(error => {
-            toast("Error Updating Record", {type: "error"})
+            toast("Error Updating Record", {type: "error"});
         })
     }
 
@@ -108,94 +108,95 @@ const EditRecord = () => {
 
                 <div className="page-container">
                     <div className="body-container">
-                    <div className="form-container">
-                        <div className="form-box">
+                        <div className="edit-record-form-container">
                             <h2>Update Record</h2>
+                            <div className="edit-record-form-box">
 
-                            {/* display all (main) editable fields */}
-                            {mainFields.map((field) => (
-                                <div className="field-box" key={field.name}>
-                                    <label htmlFor="">{field.placeholder}</label>
-                                    {field.type === "dropdown" ? (
-                                        <select
-                                            name={field.name}
-                                            value={formData[field.name]}
-                                            onChange={handleChange}
-                                        >
-                                            {field.options.map((option) => (
-                                                <option key={option} value={option}>
-                                                    {option}
-                                                </option>
-                                            ))}
-                                        </select>
-                                    ) : (
-                                        <input
-                                            type="text"
-                                            name={field.name}
-                                            placeholder={field.placeholder}
-                                            value={formData[field.name]}
-                                            onChange={handleChange}
-                                        />
-                                    )}
+                                {/* display all (main) editable fields */}
+                                {mainFields.map((field) => (
+                                    <div className="edit-record-field-box" key={field.name}>
+                                        <label htmlFor="">{field.placeholder}</label>
+                                        {field.type === "dropdown" ? (
+                                            <select className="edit-record-dropdown"
+                                                name={field.name}
+                                                value={formData[field.name]}
+                                                onChange={handleChange}
+                                            >
+                                                {field.options.map((option) => (
+                                                    <option key={option} value={option}>
+                                                        {option}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                        ) : (
+                                            <input
+                                                type="text"
+                                                name={field.name}
+                                                placeholder={field.placeholder}
+                                                value={formData[field.name]}
+                                                onChange={handleChange}
+                                            />
+                                        )}
+                                    </div>
+                                ))}
+
+
+                                {/* extra fields */}
+                                {/* only display if field/value exists */}
+                                {additionalFields.map((field) => (
+                                    formData[field.name] && (
+                                        <div className="edit-record-field-box" key={field.name}>
+                                            <label htmlFor="">{field.label}</label>
+                                            <input
+                                                type="text"
+                                                name={field.name}
+                                                placeholder={field.label}
+                                                value={formData[field.name]}
+                                                onChange={handleChange}
+                                            />
+                                        </div>
+                                    )
+                                ))}
+
+                                {/* edit record btn */}
+                                <div className="edit-record-btn-container">
+                                    <button className="gradiant-button" onClick={handleUpdate}>Update</button>
                                 </div>
-                            ))}
+                            </div>
 
-
-                            {/* extra fields */}
-                            {/* only display if field/value exists */}
-                            {additionalFields.map((field) => (
-                                formData[field.name] && (
-                                    <div className="field-box" key={field.name}>
-                                        <label htmlFor="">{field.label}</label>
+                            {/* add additional fields */}
+                            <div className="edit-record-additional-field-section">
+                                <h2>Add More Information</h2>
+                                <div className="edit-record-field-box dropdown">
+                                    <label htmlFor="">Select Field</label>
+                                    <select
+                                        value={selectedField}
+                                        onChange={(e) => handleFieldSelect(e.target.value)}
+                                    >
+                                        <option value="">-- Choose --</option>
+                                        {additionalInfoOptions.map((option) => (
+                                            <option key={option} value={option}>
+                                                {option}
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+                                {selectedField && (
+                                    <div className="edit-record-field-box">
+                                        <label htmlFor="">{selectedField}</label>
                                         <input
                                             type="text"
-                                            name={field.name}
-                                            placeholder={field.label}
-                                            value={formData[field.name]}
-                                            onChange={handleChange}
+                                            value={fieldValue}
+                                            onChange={handleFieldValueChange}
                                         />
                                     </div>
-                                )
-                            ))}
-
-                            {/* edit record btn */}
-                            <button className="gradiant-button" onClick={handleUpdate}>Update</button>
-                        </div>
-                        </div>
-
-                        {/* add additional fields */}
-                        <div className="additional-field-section">
-                            <h2>Add More Information</h2>
-                            <div className="field-box dropdown">
-                                <label htmlFor="">Select Field</label>
-                                <select
-                                    value={selectedField}
-                                    onChange={(e) => handleFieldSelect(e.target.value)}
-                                >
-                                    <option value="">-- Choose --</option>
-                                    {additionalInfoOptions.map((option) => (
-                                        <option key={option} value={option}>
-                                            {option}
-                                        </option>
-                                    ))}
-                                </select>
-                            </div>
-                            {selectedField && (
-                                <div className="field-box">
-                                    <label htmlFor="">{selectedField}</label>
-                                    <input
-                                        type="text"
-                                        value={fieldValue}
-                                        onChange={handleFieldValueChange}
-                                    />
+                                )}
+                                <div className="edit-record-add-field-button">
+                                    <button className="gradiant-button" onClick={handleAddAdditionalField}>
+                                        Add Field
+                                    </button>
                                 </div>
-                            )}
-                            <button
-                                className="gradiant-button"
-                                onClick={handleAddAdditionalField}
-                            >
-                                Add Field
-                            </button>
+                            </div>
                         </div>
                     </div>
                 </div>

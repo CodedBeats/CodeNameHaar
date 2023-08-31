@@ -1,0 +1,89 @@
+/* edit record container */
+.edit-record-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+.edit-record-form-container h2 {
+    font-size: 3em;
+    margin: 20px 0;
+}
+
+/* main record fields container */
+.edit-record-form-box {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    background-color: rgb(39, 39, 39);
+    border: 2px solid rgb(147, 0, 184);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* individual fields */
+.edit-record-field-box {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-record-field-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+}
+
+.edit-record-field-box input {
+    padding: 8px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+}
+.edit-record-field-box select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+}
+
+/* update record btn container */
+.edit-record-btn-container {
+    grid-column: span 2; /* Span across both columns */
+    display: flex;
+    justify-content: center;
+}
+
+/* add fields */
+.edit-record-additional-field-section {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    background-color: rgb(39, 39, 39);
+    border: 2px solid rgb(147, 0, 184);
+    border-radius: 20px;
+}
+.edit-record-additional-field-section h2 {
+    margin: 20px 0;
+    font-size: 2em;
+}
+.edit-record-flex-center {
+    display: flex;
+    align-items: center;
+}
+.edit-record-add-field-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
