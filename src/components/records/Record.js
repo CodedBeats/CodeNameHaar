@@ -6,7 +6,7 @@ import { doc, onSnapshot } from "firebase/firestore"
 // style
 import "../misc/css/page-container.css"
 import "../misc/css/buttons.css"
-// import "./css/record.css"
+import "./css/record.css"
 
 // components/variables
 import Navbar from "../nav/Navbar"
@@ -16,8 +16,8 @@ import { db } from "../firebase/firebaseConfig"
 
 const Record = () => {
 
-    const {id} = useParams()
-    const [record, setRecord] = useState(null)
+    const {id} = useParams();
+    const [record, setRecord] = useState(null);
 
     // store record fields in an arr just for cleaner code
     const mainFields = [
@@ -27,10 +27,9 @@ const Record = () => {
         { key: 'birthday', title: 'Birthday' },
         { key: 'gender', title: 'Gender' },
         { key: 'job', title: 'Job' },
-        { key: 'lastMeet', title: 'lLast Meet' },
+        { key: 'lastMeet', title: 'Last Meet' },
         { key: 'livingStatus', title: 'Living Status' },
         { key: 'location', title: 'Location' },
-        // ... add other main fields
     ];
 
     const additionalFields = [
@@ -47,7 +46,7 @@ const Record = () => {
             setRecord({...snapshot.data(), id: snapshot.id})
             // console.log({...snapshot.data()})
         })
-    }, [id])
+    }, [id]);
 
     return ( 
         <div className="container">
@@ -57,29 +56,37 @@ const Record = () => {
                     
                     { record && 
                         <div className="record-container" >
-                            {/* Main fields */}
-                            {mainFields.map(field => (
-                                <div className="record-field-container" key={field.key}>
-                                    <label>{field.title}</label>
-                                    <p>{record[field.key]}</p>
-                                </div>
-                            ))}
-
-                            {/* additional fields */}
-                            {/* only display if field/value exists */}
-                            {additionalFields.map(field => (
-                                record[field.key] && (
+                            <div className="record-content-container">
+                                {/* Main fields */}
+                                {mainFields.map(field => (
                                     <div className="record-field-container" key={field.key}>
                                         <label>{field.title}</label>
                                         <p>{record[field.key]}</p>
                                     </div>
-                                )
-                            ))}
+                                ))}
 
-                            {/* delete record */}
-                            <DeleteRecord id={record.id} />
+                                {/* additional fields */}
+                                {/* only display if field/value exists */}
+                                {additionalFields.map(field => (
+                                    record[field.key] && (
+                                        <div className="record-field-container" key={field.key}>
+                                            <label>{field.title}</label>
+                                            <p>{record[field.key]}</p>
+                                        </div>
+                                    )
+                                ))}
 
-                            <Link to={`/records/edit/${id}`} className="add-item">Edit</Link>
+                                {/* edit record */}
+                                <div className="record-btn-container gradiant-button-container">
+                                    <Link to={`/records/edit/${id}`}>
+                                        <button className="gradiant-button">Edit</button>
+                                    </Link>
+                                </div>
+                                {/* delete record */}
+                                <div className="record-btn-container">
+                                    <DeleteRecord id={record.id} />
+                                </div>
+                            </div>
                         </div>
                     } 
                 </div>

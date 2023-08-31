@@ -7,43 +7,6 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
-.record-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    row-gap: 5px;
-    padding: 5px;
-    margin: 30px;
-    max-width: 300px;
-    background: rgb(83, 83, 83);
-}
-
-/* special borders repeating */
-.record-container:nth-child(odd) {box-shadow: 0 0 6px 6px rgb(22, 184, 22);}
-.record-container:nth-child(even) {box-shadow: 0 0 6px 6px rgb(11, 182, 174);}
-
-.record-field {
-    text-align: center;
-    width: 100%;
-    transition: 0.5s;
-}
-.record-field:hover {
-    background: rgb(0, 0, 0) !important;
-}
-.record-field a {
-    text-decoration: none;
-}
-.field-name {
-    color: rgb(204, 0, 0);
-    margin: 10px;
-    font-weight: bold;
-    font-size: 1.8rem;
-}
-.field-info {
-    color: rgb(255, 255, 255);
-    margin: 5px;
-    font-size: 1.2rem;
-}
 
 
 
