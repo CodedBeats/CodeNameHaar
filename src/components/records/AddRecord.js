@@ -1,5 +1,6 @@
 // dependencies
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
 import { addDoc, collection, Timestamp } from "firebase/firestore"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { toast } from "react-toastify"
@@ -15,6 +16,7 @@ import { db, auth } from "../firebase/firebaseConfig"
 
 
 const AddRecord = () => {
+    const navigate = useNavigate();
 
     const [user] = useAuthState(auth)
     // set data as object rather than individual states
@@ -69,6 +71,9 @@ const AddRecord = () => {
         })
         .then(() => {
             toast("Record Added Successfully", {type: "success"})
+
+            // Route to a different page after successful submission
+            navigate("/records");
         })
         .catch((err) => {
             toast("Error Adding Record", {type: "error"})

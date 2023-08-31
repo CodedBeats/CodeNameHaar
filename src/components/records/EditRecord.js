@@ -1,11 +1,7 @@
-/* 
-https://softauthor.com/firebase-firestore-update-document-data-updatedoc/
-*/
-
 // dependencies
 import { useState, useEffect } from "react"
-import { useParams, Link } from "react-router-dom"
-import { addDoc, collection, Timestamp, updateDoc, doc, onSnapshot } from "firebase/firestore"
+import { useParams, useNavigate } from "react-router-dom"
+import { updateDoc, doc, onSnapshot } from "firebase/firestore"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { toast } from "react-toastify"
 
@@ -19,10 +15,14 @@ import Footer from "../nav/Footer"
 import { db, auth } from "../firebase/firebaseConfig"
 
 const EditRecord = () => {
+    const navigate = useNavigate();
 
     const {id} = useParams()
     const [user] = useAuthState(auth)
     const [record, setRecord] = useState(null)
+    const [selectedField, setSelectedField] = useState("");
+    const [fieldValue, setFieldValue] = useState("");
+    
     // set data as object rather than individual states
     const [formData, setFormData] = useState({
         age: "",
@@ -48,11 +48,56 @@ const EditRecord = () => {
         updateDoc(docRef, formData)
         .then(() => {
             toast("Record Updated Successfully", {type: "success"})
+
+            // Route to a different page after successful submission
+            navigate("/records");
         })
         .catch(error => {
             toast("Error Updating Record", {type: "error"})
         })
     }
+
+    // store record fields in an arr just for cleaner code
+    const mainFields = [
+        { name: "age", placeholder: "Age" },
+        { name: "birthday", placeholder: "Birthday" },
+        { name: "gender", placeholder: "Gender", type: "dropdown", options: ["-- Choose --", "Male", "Female", "Other"] },
+        { name: "info", placeholder: "Information" },
+        { name: "job", placeholder: "Job" },
+        { name: "lastMeet", placeholder: "Last Meet" },
+        { name: "livingStatus", placeholder: "Living Status" },
+        { name: "location", placeholder: "Location" },
+        { name: "name", placeholder: "Name" },
+    ];
+    const additionalFields = [
+        { name: "favouriteFood", label: "Favourite Food" },
+        { name: "dislikes", label: "Dislikes" },
+        { name: "hobbies", label: "Hobbies" },
+        { name: "tattoos", label: "Tattoos" },
+        { name: "family", label: "Family" },
+    ];
+
+    // additional fields
+    const additionalInfoOptions = ["favouriteFood", "dislikes", "hobbies", "tattoos", "family"];
+    const handleFieldSelect = (option) => {
+        setSelectedField(option);
+    };
+    const handleFieldValueChange = (e) => {
+        setFieldValue(e.target.value);
+    };
+    const handleAddAdditionalField = () => {
+        if (selectedField && fieldValue) {
+            // Update the formData or record object with the additional field
+            setFormData((prevData) => ({
+                ...prevData,
+                [selectedField]: fieldValue,
+            }));
+    
+            // Clear selected field and field value
+            setSelectedField("");
+            setFieldValue("");
+        }
+    };
     
 
     return (
@@ -67,34 +112,90 @@ const EditRecord = () => {
                         <div className="form-box">
                             <h2>Update Record</h2>
 
-                            <div className="field-box">
-                                {/* age */}
-                                <label htmlFor=""></label>
-                                <input 
-                                    type="text" 
-                                    name="age" 
-                                    placeholder="Age"
-                                    text = "Age"
-                                    value={formData.age}
-                                    onChange={(e) => handleChange(e)}
-                                />
-                            </div>
+                            {/* display all (main) editable fields */}
+                            {mainFields.map((field) => (
+                                <div className="field-box" key={field.name}>
+                                    <label htmlFor="">{field.placeholder}</label>
+                                    {field.type === "dropdown" ? (
+                                        <select
+                                            name={field.name}
+                                            value={formData[field.name]}
+                                            onChange={handleChange}
+                                        >
+                                            {field.options.map((option) => (
+                                                <option key={option} value={option}>
+                                                    {option}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    ) : (
+                                        <input
+                                            type="text"
+                                            name={field.name}
+                                            placeholder={field.placeholder}
+                                            value={formData[field.name]}
+                                            onChange={handleChange}
+                                        />
+                                    )}
+                                </div>
+                            ))}
 
-                            <div className="field-box">
-                                {/* birthday */}
-                                <label htmlFor=""></label>
-                                <input 
-                                    type="text" 
-                                    name="birthday"  
-                                    placeholder="Birthday"
-                                    value={formData.birthday}
-                                    onChange={(e) => handleChange(e)}
-                                />
-                            </div>
 
-                            {/* publish record button */}
+                            {/* extra fields */}
+                            {/* only display if field/value exists */}
+                            {additionalFields.map((field) => (
+                                formData[field.name] && (
+                                    <div className="field-box" key={field.name}>
+                                        <label htmlFor="">{field.label}</label>
+                                        <input
+                                            type="text"
+                                            name={field.name}
+                                            placeholder={field.label}
+                                            value={formData[field.name]}
+                                            onChange={handleChange}
+                                        />
+                                    </div>
+                                )
+                            ))}
+
+                            {/* edit record btn */}
                             <button className="gradiant-button" onClick={handleUpdate}>Update</button>
                         </div>
+                        </div>
+
+                        {/* add additional fields */}
+                        <div className="additional-field-section">
+                            <h2>Add More Information</h2>
+                            <div className="field-box dropdown">
+                                <label htmlFor="">Select Field</label>
+                                <select
+                                    value={selectedField}
+                                    onChange={(e) => handleFieldSelect(e.target.value)}
+                                >
+                                    <option value="">-- Choose --</option>
+                                    {additionalInfoOptions.map((option) => (
+                                        <option key={option} value={option}>
+                                            {option}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                            {selectedField && (
+                                <div className="field-box">
+                                    <label htmlFor="">{selectedField}</label>
+                                    <input
+                                        type="text"
+                                        value={fieldValue}
+                                        onChange={handleFieldValueChange}
+                                    />
+                                </div>
+                            )}
+                            <button
+                                className="gradiant-button"
+                                onClick={handleAddAdditionalField}
+                            >
+                                Add Field
+                            </button>
                         </div>
                     </div>
                 </div>
