@@ -19,9 +19,30 @@ const Record = () => {
     const {id} = useParams()
     const [record, setRecord] = useState(null)
 
+    // store record fields in an arr just for cleaner code
+    const mainFields = [
+        { key: 'name', title: 'Name' },
+        { key: 'info', title: 'Info' },
+        { key: 'age', title: 'Age' },
+        { key: 'birthday', title: 'Birthday' },
+        { key: 'gender', title: 'Gender' },
+        { key: 'job', title: 'Job' },
+        { key: 'lastMeet', title: 'lLast Meet' },
+        { key: 'livingStatus', title: 'Living Status' },
+        { key: 'location', title: 'Location' },
+        // ... add other main fields
+    ];
+
+    const additionalFields = [
+        { key: 'favouriteFood', title: 'Favourite Food' },
+        { key: 'dislikes', title: 'Dislikes' },
+        { key: 'hobbies', title: 'Hobbies' },
+        { key: 'tattoos', title: 'Tattoos' },
+        { key: 'family', title: 'Family' },
+    ];
+
     useEffect(() => {
         const docRef = doc(db, "records", id)
-        // console.log(docRef)
         onSnapshot(docRef, (snapshot) => {
             setRecord({...snapshot.data(), id: snapshot.id})
             // console.log({...snapshot.data()})
@@ -36,50 +57,26 @@ const Record = () => {
                     
                     { record && 
                         <div className="record-container" >
-                            <div className="record-field">
-                                <p className="field-title">Name</p>
-                                <p className="field-value">{record.name}</p>
-                            </div>
-                            <div className="record-field">
-                                <p className="field-title">Info</p>
-                                <p className="field-value">{record.info}</p>
-                            </div>
-                            <div className="record-field">
-                                <p className="field-title">Age</p>
-                                <p className="field-value">{record.age}</p>
-                            </div>
-                            <div className="record-field">
-                                <p className="field-title">Birthday</p>
-                                <p className="field-value">{record.birthday}</p>
-                            </div>
-                            <div className="record-field">
-                                <p className="field-title">Gender</p>
-                                <p className="field-value">{record.gender}</p>
-                            </div>
-                            <div className="record-field">
-                                <p className="field-title">Job</p>
-                                <p className="field-value">{record.job}</p>
-                            </div>
-                            <div className="record-field">
-                                <p className="field-title">Last Meet</p>
-                                <p className="field-value">{record.lastMeet}</p>
-                            </div>
-                            <div className="record-field">
-                                <p className="field-title">Living Status</p>
-                                <p className="field-value">{record.livingStatus}</p>
-                            </div>
-                            <div className="record-field">
-                                <p className="field-title">Location</p>
-                                <p className="field-value">{record.location}</p>
-                            </div>
-                            <div className="record-field">
-                                <p className="field-title">Relationship Status</p>
-                                <p className="field-value">{record.relationshipStatus}</p>
-                            </div>
-                            <div className="record-field">
-                                <p className="field-title">Created On</p>
-                                <p className="field-value">{record.createdAt.toDate().toDateString()}</p>
-                            </div>
+                            {/* Main fields */}
+                            {mainFields.map(field => (
+                                <div className="record-field-container" key={field.key}>
+                                    <label>{field.title}</label>
+                                    <p>{record[field.key]}</p>
+                                </div>
+                            ))}
+
+                            {/* additional fields */}
+                            {/* only display if field/value exists */}
+                            {additionalFields.map(field => (
+                                record[field.key] && (
+                                    <div className="record-field-container" key={field.key}>
+                                        <label>{field.title}</label>
+                                        <p>{record[field.key]}</p>
+                                    </div>
+                                )
+                            ))}
+
+                            {/* delete record */}
                             <DeleteRecord id={record.id} />
 
                             <Link to={`/records/edit/${id}`} className="add-item">Edit</Link>
