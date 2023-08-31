@@ -1,12 +1,64 @@
-/* === Records Display === */
+/* no records */
 .no-records {
     font-size: 1.2rem;
 }
-.records {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+
+/* add record */
+.records-btn-container  {
+    justify-content: left;
+    padding: 10px 0;
 }
+
+/* records container */
+.records {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    background-color: rgb(66, 66, 66);
+    border-radius: 20px;
+}
+.records-title {
+    margin: 20px 0;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+}
+
+/* record */
+.records-record-container {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.records-record-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.records-record-field a {
+    text-decoration: none;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+.records-record-field a:hover {
+    background-color: rgb(219, 161, 0);
+    border-radius: 5px;
+}
+.records-record-field p {
+    margin: 10px 0;
+}
+.records-field-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(0, 110, 201);
+}
+.records-field-info {
+    font-size: 1.2em;
+}
+
+
 
 
 

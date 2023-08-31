@@ -43,8 +43,12 @@ const Records = () => {
             
             <div className="page-container">
                 <div className="body-container">
-                    <h2>Records</h2>
-                    {user && <Link to="/records/add" className="add-item">Add Record</Link>}
+                    <h2 className="records-title">Records</h2>
+                    <div className="records-btn-container gradiant-button-container">
+                        <Link to="/records/add">
+                            <button className="gradiant-button">Add Record</button>
+                        </Link>
+                    </div>
 
                     <div className="records">
                         {
@@ -54,14 +58,14 @@ const Records = () => {
                         ):(
                         // else: cycle through records array to display each record in this format
                         records.map(({id, name, info}) => 
-                            <div key={id} className="record-container" >
-                                <div className="record-field">
+                            <div key={id} className="records-record-container" >
+                                <div className="records-record-field">
                                     <Link to={`/records/${id}`}>
-                                        <p className="field-name">{name}</p>
+                                        <p className="records-field-name">{name}</p>
                                     </Link>
                                 </div>
-                                <div className="record-field">
-                                    <p className="field-info">{info}</p>
+                                <div className="records-record-field">
+                                    <p className="records-field-info">{info}</p>
                                 </div>
                             </div>
                         ))}
