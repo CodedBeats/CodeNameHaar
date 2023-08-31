@@ -1,9 +1,9 @@
-.form-container {
+.add-record-form-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.form-box {
+.add-record-form-box {
     width: 700px;
     padding: 40px;
     margin: 50px;
@@ -12,17 +12,17 @@
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
 }
-.form-box h2 {
+.add-record-form-box h2 {
     margin: 0 0 30px;
     padding: 0;
     color: #fff;
     text-align: center;
     font-size: 2rem;
 }
-.form-box .field-box {
+.add-record-form-box .add-record-field-box {
     position: relative;
 }
-.form-box .field-box input {
+.add-record-form-box .add-record-field-box input {
     width: 100%;
     padding: 10px 0;
     font-size: 18px;
@@ -36,24 +36,24 @@
 input::placeholder {
     color: rgb(199, 199, 199);
 }
-.dropdown {
+.add-record-dropdown {
     display: flex;
     margin-bottom: 30px;
     border-bottom: 1px solid #fff;
 }
-.dropdown label {
+.add-record-dropdown label {
     padding: 10px 20px 10px 0px;
 }
-.dropdown select {
+.add-record-dropdown select {
     background: transparent;
     border: 1px solid rgb(255, 255, 255);
     border-bottom: none;
     color: rgb(255, 255, 255);
 }
-.dropdown select option {
+.add-record-dropdown select option {
     color: rgb(0, 0, 0);
 }
-.dropdown label {
+.add-record-dropdown label {
     font-size: 20px;
     color: rgb(199, 199, 199);
 }
