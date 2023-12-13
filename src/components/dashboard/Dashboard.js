@@ -8,6 +8,7 @@ import "./css/dashboard.css"
 // components
 import Navbar from "../nav/Navbar"
 import Footer from "../nav/Footer"
+import Eyes from "../misc/Eyes"
 
 
 const Dashboard = () => {
@@ -18,6 +19,7 @@ const Dashboard = () => {
     return ( 
         <div className="dashboard container">
             <Navbar />
+            <Eyes />
             
             <div className="page-container">
                 <div className="body-container">
