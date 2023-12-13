@@ -30,6 +30,7 @@ const Record = () => {
         { key: 'lastMeet', title: 'Last Meet' },
         { key: 'livingStatus', title: 'Living Status' },
         { key: 'location', title: 'Location' },
+        { key: 'relationshipStatus', title: 'Relationship Status' },
     ];
 
     const additionalFields = [

@@ -68,6 +68,7 @@ const EditRecord = () => {
         { name: "livingStatus", placeholder: "Living Status" },
         { name: "location", placeholder: "Location" },
         { name: "name", placeholder: "Name" },
+        { name: "relationshipStatus", placeholder: "Relationship Status" },
     ];
     const additionalFields = [
         { name: "favouriteFood", label: "Favourite Food" },
