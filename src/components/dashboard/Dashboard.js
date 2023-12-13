@@ -19,7 +19,6 @@ const Dashboard = () => {
     return ( 
         <div className="dashboard container">
             <Navbar />
-            <Eyes />
             
             <div className="page-container">
                 <div className="body-container">
