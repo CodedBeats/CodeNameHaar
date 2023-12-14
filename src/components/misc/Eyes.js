@@ -3,7 +3,7 @@ import "./css/eyes.css"; // Create your CSS file for styling
 
 //imgs
 import rand1 from "../../imgs/rand1.png";
-import rand2 from "../../imgs/rand2.jpg";
+import rand2 from "../../imgs/rand2.png";
 
 const Eyes = () => {
     const angle = (cx, cy, ex, ey) =>{
@@ -31,7 +31,7 @@ const Eyes = () => {
             const eyes = document.querySelectorAll('.eye');
             eyes.forEach(eye => {
                 eye.style.transform = `rotate(${90 + angleDeg}deg)`;    
-                anchor.style.filter = `hue-rotate(${angleDeg}deg)`;
+                // anchor.style.filter = `hue-rotate(${angleDeg}deg)`;
             })
         };
         window.addEventListener("mousemove", handleMouseMove);
@@ -42,8 +42,8 @@ const Eyes = () => {
         <div className="circle-container">
             <img id="anchor" src={rand1} alt="anchor-img"></img>
             <div id="eyes">
-                <img className="eye" src={rand2} alt="eye-img" style={{top: "372px", left: "297px"}}></img>
-                <img className="eye" src={rand2} alt="eye-img" style={{top: "371px", left: "161px"}}></img>
+                <img className="eye" src={rand2} alt="eye-img" style={{top: "420px", left: "591px"}}></img>
+                <img className="eye" src={rand2} alt="eye-img" style={{top: "420px", left: "411px"}}></img>
             </div>
         </div>
     )
