@@ -1,52 +1,54 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./css/eyes.css"; // Create your CSS file for styling
 
-//imgs
-import rand1 from "../../imgs/rand1.png";
-import rand2 from "../../imgs/rand2.png";
-
 const Eyes = () => {
-    const angle = (cx, cy, ex, ey) =>{
-        const dx = cx - ex;
-        const dy = ey - cy;
-        const rad = Math.atan2(dx, dy); // range (-PI, PI)
-        const deg = rad * 180 / Math.PI; // rads to degs, range (-180, 180)
-        return deg;
-    }
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+
+    const pupils = document.querySelectorAll(".pupil");
+    const pupilLeft = document.getElementById("pupil1");
+    const position = pupilLeft.getBoundingClientRect();
+    const posX = position.left;
+    const posY = position.top;
+    const eye1 = document.getElementById("eye1");
+    const eye2 = document.getElementById("eye2");
+    const eyes = [eye1, eye2];
 
     useEffect(() => {
         const handleMouseMove = (e) => {
             const mouseX = e.clientX;
             const mouseY = e.clientY;
 
-            const anchor = document.getElementById('anchor');
-            const rekt = anchor.getBoundingClientRect();
-            const anchorX = rekt.left + rekt.width / 2;
-            const anchorY = rekt.top + rekt.height / 2;
-
-            const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
-            
-            // console.log(angleDeg);
-
-            const eyes = document.querySelectorAll('.eye');
-            eyes.forEach(eye => {
-                eye.style.transform = `rotate(${90 + angleDeg}deg)`;    
-                // anchor.style.filter = `hue-rotate(${angleDeg}deg)`;
-            })
+            pupils.forEach((pupil) => {
+                console.log("old", posX, posY)
+                const newPosX = posX + ((screenWidth / 80) + (mouseX / 80))
+                const newPosY = posY + ((screenHeight / 80) + (mouseY / 80))
+                console.log("new", newPosX, newPosY)
+                
+                // Set the new position of pupil
+                pupil.style.left = newPosX + 'px';
+                pupil.style.top = newPosY + 'px';
+            });
         };
+
         window.addEventListener("mousemove", handleMouseMove);
-    }, []);
+
+        return () => {
+            window.removeEventListener("mousemove", handleMouseMove);
+        };
+    }, [screenWidth, screenHeight]);
 
 
     return (
-        <div className="circle-container">
-            <img id="anchor" src={rand1} alt="anchor-img"></img>
-            <div id="eyes">
-                <img className="eye" src={rand2} alt="eye-img" style={{top: "420px", left: "591px"}}></img>
-                <img className="eye" src={rand2} alt="eye-img" style={{top: "420px", left: "411px"}}></img>
+        <div className="eyes-container">
+            <div className="eye" id="eye1">
+                <div className="pupil" id="pupil1"></div>
+            </div>
+            <div className="eye" id="eye2">
+                <div className="pupil" id="pupil2"></div>
             </div>
         </div>
-    )
+    );
 };
 
 export default Eyes;
