@@ -12,9 +12,6 @@ import Eyes from "../misc/Eyes"
 
 
 const Dashboard = () => {
-
-    const [possition, setPossition] = useState("0%")
-    const [backgroundWidth, setBackgroundWidth] = useState("500px")
     
     return ( 
         <div className="dashboard container">
@@ -23,29 +20,8 @@ const Dashboard = () => {
             <div className="page-container">
                 <div className="body-container">
                     <div className="synopsis-container">
-                        <div className="synopsis-title" 
-                            onMouseEnter={() => {setPossition("57%"); setBackgroundWidth("80px")}} 
-                            onMouseLeave={() => {setPossition("0%"); setBackgroundWidth("500px")}}
-                        >
-                            {/* needs a fix */}
-                            <p className="mobile-title">&lt;CodedBeats /&gt;</p>
-                            <p className="left">
-                                &lt;
-                            </p>
-                            <p className="middle"
-                                style={{
-                                    width: possition,
-                                }}
-                            >
-                                CodedBeats&nbsp;
-                            </p>
-                            <p className="right"
-                                style={{
-                                    width: backgroundWidth
-                                }}>
-                                /&gt;
-                            </p>
-                            
+                        <div className="synopsis-title">
+                            <p>&lt;CodedBeats /&gt;</p>
                         </div>
                         <div className="synopsis-content">
                             Hi there, My name is Luca Haar. <br />
